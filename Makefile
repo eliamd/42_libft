@@ -20,6 +20,8 @@ SRCS        :=      ft_isdigit.c \
                           ft_atoi.c \
                           ft_isalnum.c \
 						  ft_strlcat.c \
+						  ft_toupper.c \
+						  ft_tolower.c \
 
 OBJS        := $(SRCS:.c=.o)
 
