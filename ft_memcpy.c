@@ -6,7 +6,7 @@
 /*   By: edetoh <edetoh@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 09:54:04 by edetoh            #+#    #+#             */
-/*   Updated: 2024/10/15 11:24:36 by edetoh           ###   ########.fr       */
+/*   Updated: 2024/10/15 14:44:17 by edetoh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,8 @@ void	*ft_memcpy(void *restrict dest, const void *restrict src, size_t count)
 	unsigned char	*ptrdest;
 	size_t			i;
 
+	if (!dest && !src)
+		return (NULL);
 	ptrsrc = (unsigned char *)src;
 	ptrdest = (unsigned char *)dest;
 	i = 0;

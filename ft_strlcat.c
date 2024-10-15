@@ -1,14 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: edetoh <edetoh@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/28 18:37:49 by edetoh            #+#    #+#             */
-/*   Updated: 2024/10/15 14:41:51 by edetoh           ###   ########.fr       */
+/*   Created: 2024/10/15 13:22:17 by edetoh            #+#    #+#             */
+/*   Updated: 2024/10/15 15:10:03 by edetoh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 /*
  * La fonction ft_strlcpy copie 'size' caractères de la chaîne
@@ -23,33 +25,39 @@
    en évitant les débordements de tampon.
  */
 
-unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
+size_t	ft_strlcat(char *restrict dest, char *restrict src, \
+	size_t size)
 {
-	unsigned int	count;
+	unsigned int	dest_len;
+	unsigned int	src_len;
 	unsigned int	i;
 
-	count = 0;
-	while (src[count] != '\0')
-		++count;
-	if (size == 0)
-		return (count);
+	dest_len = 0;
+	src_len = 0;
+	while (src[src_len] != '\0')
+		++src_len;
+	while (dest[dest_len] != '\0' && dest_len < size)
+		++dest_len;
+	if (dest_len == size)
+		return (dest_len + src_len);
 	i = 0;
-	while (src[i] != '\0' && i < (size - 1))
+	while (i < src_len && (dest_len + i + 1) < size)
 	{
-		dest[i] = src[i];
+		dest[dest_len + i] = src[i];
 		++i;
 	}
-	dest[i] = '\0';
-	return (count);
+	dest[dest_len + i] = '\0';
+	return (dest_len + src_len);
 }
 
 // int main(void)
 // {
-// 	char src[] = "Hello World!";
-// 	char dest[6];
+// 	char src[7] = "123456";
+// 	char dest[7] = "123456";
 // 	int i;
 
-// 	i = ft_strlcpy(dest, src, 6);
+// 	printf("src: %s\n", src);
+// 	i = ft_strlcpy(dest, src, 14);
 // 	printf("src: %s\n", src);
 // 	printf("dest: %s\n", dest);
 // 	printf("i: %d\n", i);

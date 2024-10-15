@@ -6,9 +6,11 @@
 /*   By: edetoh <edetoh@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 11:08:16 by edetoh            #+#    #+#             */
-/*   Updated: 2024/10/15 12:02:25 by edetoh           ###   ########.fr       */
+/*   Updated: 2024/10/15 15:02:02 by edetoh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 /*
  * La fonction ft_memmove copie 'count' octets de la zone mémoire 'src' vers
@@ -21,8 +23,6 @@
  * Elle renvoie un pointeur vers la zone mémoire de destination.
  Cette fonction est généralement utilisée pour déplacer des blocs de mémoire.
  */
-
-#include "libft.h"
 
 void	*ft_memmove(void *dest, const void *src, size_t count)
 {
