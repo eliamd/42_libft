@@ -6,11 +6,11 @@
 /*   By: edetoh <edetoh@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 16:05:01 by edetoh            #+#    #+#             */
-/*   Updated: 2024/10/14 18:16:33 by edetoh           ###   ########.fr       */
+/*   Updated: 2024/10/15 11:24:36 by edetoh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 /*
  * La fonction ft_memset remplit les premiers 'n' octets de la zone
