@@ -6,7 +6,7 @@
 /*   By: edetoh <edetoh@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 11:08:16 by edetoh            #+#    #+#             */
-/*   Updated: 2024/10/15 11:24:36 by edetoh           ###   ########.fr       */
+/*   Updated: 2024/10/15 11:42:00 by edetoh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ void	*ft_memmove(void *dest, const void *src, size_t count)
 // 	printf("av : str : %s\n", str);
 // 	printf("av : str2 : %s\n", str2);
 
-// 	ft_memcpy(str2, str, 8);
+// 	ft_memmove(str2, str, 8);
 
 // 	printf("ap : str : %s\n", str);
 // 	printf("ap : str2 : %s\n", str2);
