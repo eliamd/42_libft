@@ -6,7 +6,7 @@
 /*   By: edetoh <edetoh@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 11:13:45 by edetoh            #+#    #+#             */
-/*   Updated: 2024/10/15 15:27:57 by edetoh           ###   ########.fr       */
+/*   Updated: 2024/10/15 15:33:20 by edetoh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,6 @@ size_t			ft_strlcat(char *restrict dest, char *restrict src, \
 				size_t size);
 int				ft_tolower(int letter);
 int				ft_toupper(int letter);
+int				ft_strncmp(char *s1, char *s2, unsigned int n);
 
 #endif

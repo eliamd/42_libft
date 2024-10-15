@@ -22,6 +22,7 @@ SRCS        :=      ft_isdigit.c \
 						  ft_strlcat.c \
 						  ft_toupper.c \
 						  ft_tolower.c \
+						  ft_strncmp.c \
 
 OBJS        := $(SRCS:.c=.o)
 
