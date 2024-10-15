@@ -58,11 +58,3 @@ gcc -Wall -Werror -Wextra main.c -L. -lft -o my_program
 ```
 
 Cela va lier la bibliothèque `libft.a` à votre programme.
-
-## Contributeurs
-
-Ce projet est réalisé dans le cadre de la piscine 42.
-
----
-
-Ajoute ce README au fichier `README.md` pour décrire correctement ton projet.
