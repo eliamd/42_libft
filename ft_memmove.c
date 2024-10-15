@@ -6,9 +6,21 @@
 /*   By: edetoh <edetoh@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 11:08:16 by edetoh            #+#    #+#             */
-/*   Updated: 2024/10/15 11:42:00 by edetoh           ###   ########.fr       */
+/*   Updated: 2024/10/15 12:02:25 by edetoh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+ * La fonction ft_memmove copie 'count' octets de la zone mémoire 'src' vers
+  la zone mémoire 'dest', même si ces zones se chevauchent.
+
+ * Elle prend trois arguments : un pointeur 'dest' vers la zone mémoire
+ de destinationun pointeur 'src' vers la zone mémoire source, et un size_t
+ 'count' qui est le nombre d'octets à copier.
+
+ * Elle renvoie un pointeur vers la zone mémoire de destination.
+ Cette fonction est généralement utilisée pour déplacer des blocs de mémoire.
+ */
 
 #include "libft.h"
 
