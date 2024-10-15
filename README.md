@@ -1,7 +1,5 @@
 <img src="https://i.imgur.com/KqgSnxU.png"/>
 
-Voici un modèle de README que tu peux utiliser pour ton projet `libft` :
-
 ---
 
 ## Description
