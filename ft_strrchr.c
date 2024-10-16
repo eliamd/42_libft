@@ -1,41 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: edetoh <edetoh@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 15:54:44 by edetoh            #+#    #+#             */
-/*   Updated: 2024/10/16 16:33:13 by edetoh           ###   ########.fr       */
+/*   Updated: 2024/10/16 16:35:59 by edetoh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
- * La fonction ft_strchr trouve la première occurrence du
-  caractère 'letter' dans la chaîne 'str'.
+ * ft_strrchr trouve la dernière occurrence de 'letter' dans 'str'.
+ * Prend 'str' (chaîne) et 'letter' (caractère à chercher).
+ * Renvoie un pointeur vers le caractère trouvé, ou NULL.
+ */
 
- * Elle prend deux arguments : un pointeur 'str' vers la
-  chaîne à traiter et un int 'letter' qui est le caractère à chercher.
-
- * Elle renvoie un pointeur vers le premier caractère correspondant
-  dans 'str', ou NULL si le caractère n'est pas trouvé.
-
-*/
-
-char	*ft_strchr(const char *str, int letter)
+char	*ft_strrchr(const char *str, int letter)
 {
-	size_t	i;
+	size_t	str_len;
 	char	*temp_str;
 
 	temp_str = (char *)str;
-	i = 0;
-	while (temp_str[i])
+	str_len = -1;
+	while (temp_str[str_len] != '\n')
+		str_len++;
+	while (str_len > 0)
 	{
-		if ((int)temp_str[i] == letter)
-			return (&temp_str[i]);
-		i++;
+		if ((int)temp_str[str_len] == letter)
+			return (&temp_str[str_len]);
+		str_len--;
 	}
 	return (NULL);
 }
@@ -46,10 +42,10 @@ char	*ft_strchr(const char *str, int letter)
 
 // int main(void)
 // {
-// 	char *res = ft_strchr("Coucou Hlello Hello Hello pp", ' ');
+// 	char *res = ft_strrchr("Coucou Hlello Hello Hello pp", '2');
 
 // 	printf("%s\n", res);
-// 	char *res2 = strchr("Coucou Hlello Hello Hello pp", ' ');
+// 	char *res2 = strrchr("Coucou Hlello Hello Hello pp", '2');
 
 // 	printf("%s\n", res2);
 // 	return (1);
