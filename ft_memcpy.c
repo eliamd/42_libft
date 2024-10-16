@@ -24,7 +24,7 @@
   fonction est généralement utilisée pour copier des blocs de mémoire.
  */
 
-void	*ft_memcpy(void *restrict dest, const void *restrict src, size_t count)
+void	*ft_memcpy(void *dest, const void *src, size_t count)
 {
 	unsigned char	*ptrsrc;
 	unsigned char	*ptrdest;

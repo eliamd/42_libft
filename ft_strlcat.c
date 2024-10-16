@@ -25,7 +25,7 @@
    en évitant les débordements de tampon.
  */
 
-size_t	ft_strlcat(char *restrict dest, char *restrict src, \
+size_t	ft_strlcat(char *dest, char *src, \
 	size_t size)
 {
 	unsigned int	dest_len;
