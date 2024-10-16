@@ -6,7 +6,7 @@
 /*   By: edetoh <edetoh@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 11:13:45 by edetoh            #+#    #+#             */
-/*   Updated: 2024/10/16 16:36:16 by edetoh           ###   ########.fr       */
+/*   Updated: 2024/10/16 23:31:24 by edetoh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,5 +35,6 @@ int				ft_strncmp(char *s1, char *s2, unsigned int n);
 char			*ft_strnstr(char *str, char *to_find, size_t len);
 char			*ft_strchr(const char *str, int letter);
 char			*ft_strrchr(const char *str, int letter);
+int				ft_memcmp(const void *s1, const void *s2, size_t n);
 
 #endif
