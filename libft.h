@@ -6,7 +6,7 @@
 /*   By: edetoh <edetoh@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 11:13:45 by edetoh            #+#    #+#             */
-/*   Updated: 2024/10/15 15:33:20 by edetoh           ###   ########.fr       */
+/*   Updated: 2024/10/16 15:44:48 by edetoh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,6 @@ size_t			ft_strlcat(char *dest, char *src, \
 int				ft_tolower(int letter);
 int				ft_toupper(int letter);
 int				ft_strncmp(char *s1, char *s2, unsigned int n);
+char			*ft_strnstr(char *str, char *to_find, size_t len);
 
 #endif
