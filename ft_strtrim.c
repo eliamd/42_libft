@@ -6,7 +6,7 @@
 /*   By: edetoh <edetoh@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 16:53:00 by edetoh            #+#    #+#             */
-/*   Updated: 2024/10/18 18:08:13 by edetoh           ###   ########.fr       */
+/*   Updated: 2024/10/18 18:10:18 by edetoh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
  * Renvoie une nouvelle chaîne sans les caractères spécifiés.
  */
 
-int	is_a_del(char caract, char const *str_del)
+int	ft_is_a_del(char caract, char const *str_del)
 {
 	int	i;
 
@@ -43,7 +43,7 @@ char	*ft_trim(char const *str, char const *str_del)
 		return (NULL);
 	i = 0;
 	n = 0;
-	while (str[i] != '\0' && is_a_del(str[i], str_del) == 1)
+	while (str[i] != '\0' && ft_is_a_del(str[i], str_del) == 1)
 	{
 		i++;
 	}
@@ -57,7 +57,7 @@ char	*ft_trim(char const *str, char const *str_del)
 	return (trimmed);
 }
 
-char	*trim_rev(char const *str, char const *str_del)
+char	*ft_trim_rev(char const *str, char const *str_del)
 {
 	char	*trimmed;
 	size_t	str_len;
@@ -70,7 +70,7 @@ char	*trim_rev(char const *str, char const *str_del)
 	str_len = (size_t)ft_strlen((char *)str);
 	i = str_len;
 	del_len = 0;
-	while (is_a_del(str[i - 1], str_del) == 1)
+	while (ft_is_a_del(str[i - 1], str_del) == 1)
 	{
 		del_len++;
 		i--;
@@ -87,7 +87,7 @@ char	*ft_strtrim(char const *str, char const *str_del)
 	if (!trimmed)
 		return (NULL);
 	trimmed = ft_trim(str, str_del);
-	trimmed = trim_rev(trimmed, str_del);
+	trimmed = ft_trim_rev(trimmed, str_del);
 	return (trimmed);
 }
 
