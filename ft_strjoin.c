@@ -6,7 +6,7 @@
 /*   By: edetoh <edetoh@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 16:15:49 by edetoh            #+#    #+#             */
-/*   Updated: 2024/10/18 16:37:29 by edetoh           ###   ########.fr       */
+/*   Updated: 2024/10/18 16:39:27 by edetoh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	n = 0;
 	new_str = malloc((ft_strlen((char *)s1) + \
 	ft_strlen((char *)s2) + 1) * sizeof(char));
+	if (!new_str)
+		return (NULL);
 	while (s1[n] != '\0')
 	{
 		new_str[i] = s1[n];
