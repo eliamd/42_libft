@@ -6,7 +6,7 @@
 /*   By: edetoh <edetoh@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 15:54:44 by edetoh            #+#    #+#             */
-/*   Updated: 2024/10/16 16:33:13 by edetoh           ###   ########.fr       */
+/*   Updated: 2024/10/17 14:19:25 by edetoh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,8 @@ char	*ft_strchr(const char *str, int letter)
 			return (&temp_str[i]);
 		i++;
 	}
+	if (letter == '\0')
+		return (&temp_str[i]);
 	return (NULL);
 }
 
@@ -46,11 +48,11 @@ char	*ft_strchr(const char *str, int letter)
 
 // int main(void)
 // {
-// 	char *res = ft_strchr("Coucou Hlello Hello Hello pp", ' ');
+// 	char *res = ft_strchr("Bonjour", '\0');
 
-// 	printf("%s\n", res);
-// 	char *res2 = strchr("Coucou Hlello Hello Hello pp", ' ');
+// 	printf("FAKE %s\n", res);
+// 	char *res2 = strchr("Bonjour", '\0');
 
-// 	printf("%s\n", res2);
+// 	printf("VRAI %s\n", res2);
 // 	return (1);
 // }

@@ -6,7 +6,7 @@
 /*   By: edetoh <edetoh@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 15:20:52 by edetoh            #+#    #+#             */
-/*   Updated: 2024/10/16 15:42:49 by edetoh           ###   ########.fr       */
+/*   Updated: 2024/10/18 10:09:37 by edetoh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_strnstr(char *str, char *to_find, size_t len)
 	while (str[i])
 	{
 		j = 0;
-		while (str[i + j] && str[i + j] == to_find[j] && i < len)
+		while (str[i + j] && str[i + j] == to_find[j] && (i + j) < len)
 		{
 			j++;
 		}
@@ -40,11 +40,11 @@ char	*ft_strnstr(char *str, char *to_find, size_t len)
 
 // int main(void)
 // {
-// 	char *res = strnstr("Coucou Hlello Hello Hello pp", "c", 10);
+// 	char *res = strnstr("MZIRIBMZIRIBMZE123", "MZIRIBMZE", 19);
 
-// 	printf("%s\n", res);
-// 	char *res2 = ft_strnstr("Coucou Hlello Hello Hello pp", "c", 10);
+// 	printf("VRAI %s\n", res);
+// 	char *res2 = ft_strnstr("MZIRIBMZIRIBMZE123", "MZIRIBMZE", 19);
 
-// 	printf("%s\n", res2);
+// 	printf("FAKE %s\n", res2);
 // 	return (1);
 // }
