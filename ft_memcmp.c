@@ -6,7 +6,7 @@
 /*   By: edetoh <edetoh@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 23:11:34 by edetoh            #+#    #+#             */
-/*   Updated: 2024/10/18 09:53:47 by edetoh           ###   ########.fr       */
+/*   Updated: 2024/10/18 10:27:06 by edetoh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,12 +29,13 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	i = 0;
 	if (n < 1)
 		return (0);
-	n = n - 1;
-	while (arg1[i] && arg1[i] == arg2[i])
+	while (i < n)
 	{
+		if (arg1[i] != arg2[i])
+			return ((int)arg1[i] - (int)arg2[i]);
 		i++;
 	}
-	return ((int)arg1[i] - (int)arg2[i]);
+	return (0);
 }
 
 // #include  <string.h>
@@ -45,11 +46,11 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 // {
 // 	(void)argc;
 // 	(void)argv;
-// 	char str1[10] = "";
-// 	char str2[10] = "";
-// 	int res1 = ft_memcmp(str1, str2, 3);
-// 	int res2 = memcmp(str1, str2, 3);
-// 	printf("RES 1 : %d\n", res1);
-// 	printf("RES 2 : %d\n", res2);
+// 	char *str1 = "\xff\0\0\xaa\0\xde\xffMACOSX\xff";
+// 	char *str2 = "\xff\0\0\xaa\0\xde\x00MBS";
+// 	int res1 = ft_memcmp(str1, str2, 9);
+// 	int res2 = memcmp(str1, str2, 9);
+// 	printf("FAUX : %d\n", res1);
+// 	printf("VRAI : %d\n", res2);
 // 	return (0);
 // }
