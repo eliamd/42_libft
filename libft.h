@@ -6,7 +6,7 @@
 /*   By: edetoh <edetoh@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 11:13:45 by edetoh            #+#    #+#             */
-/*   Updated: 2024/10/18 16:16:06 by edetoh           ###   ########.fr       */
+/*   Updated: 2024/10/18 16:56:47 by edetoh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,5 +42,6 @@ void			*ft_calloc(size_t count, size_t size);
 char			*ft_substr(char const *str, unsigned int start, size_t len);
 char			*ft_strdup(char *src);
 char			*ft_strjoin(char const *s1, char const *s2);
+char			*ft_strtrim(char const *str, char const *caract);
 
 #endif
