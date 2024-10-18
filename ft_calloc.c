@@ -6,7 +6,7 @@
 /*   By: edetoh <edetoh@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 11:42:36 by edetoh            #+#    #+#             */
-/*   Updated: 2024/10/18 12:27:27 by edetoh           ###   ########.fr       */
+/*   Updated: 2024/10/18 14:38:01 by edetoh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,14 @@
 
 void	*ft_calloc(size_t count, size_t size)
 {
-	unsigned char	*obj;
+	void	*obj;
 
+	if (count == 0 || size == 0)
+		return (malloc(0));
 	obj = malloc(count * size);
 	if (!obj)
 		return (NULL);
-	ft_bzero(obj, count);
+	ft_bzero(obj, count * size);
 	return (obj);
 }
 
