@@ -6,7 +6,7 @@
 /*   By: edetoh <edetoh@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 15:54:44 by edetoh            #+#    #+#             */
-/*   Updated: 2024/10/18 11:30:01 by edetoh           ###   ########.fr       */
+/*   Updated: 2024/10/18 11:39:26 by edetoh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,3 +41,18 @@ void	*ft_memchr(const void *str, int letter, size_t len)
 		return (&temp_str[i]);
 	return (NULL);
 }
+
+// #include  <string.h>
+// #include  <stdio.h>
+// #include  <unistd.h>
+
+// int main(void)
+// {
+// 	char *res = ft_memchr("Bonjour", 'j', 8);
+
+// 	printf("FAKE %s\n", res);
+// 	char *res2 = memchr("Bonjour", 'j', 8);
+
+// 	printf("VRAI %s\n", res2);
+// 	return (1);
+// }

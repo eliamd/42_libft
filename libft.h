@@ -6,13 +6,14 @@
 /*   By: edetoh <edetoh@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 11:13:45 by edetoh            #+#    #+#             */
-/*   Updated: 2024/10/18 11:11:44 by edetoh           ###   ########.fr       */
+/*   Updated: 2024/10/18 11:58:37 by edetoh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 # include <stddef.h>
+# include <stdlib.h>
 
 int				ft_atoi(const char *str);
 int				ft_strlen(char *str);
@@ -37,5 +38,6 @@ char			*ft_strchr(const char *str, int letter);
 char			*ft_strrchr(const char *str, int letter);
 int				ft_memcmp(const void *s1, const void *s2, size_t n);
 void			*ft_memchr(const void *str, int letter, size_t len);
+void			*ft_calloc(size_t count, size_t size);
 
 #endif
