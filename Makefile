@@ -30,6 +30,7 @@ SRCS        :=      ft_isdigit.c \
 						  ft_memchr.c \
 						  ft_calloc.c \
 						  ft_substr.c \
+						  ft_strdup.c \
 
 
 OBJS        := $(SRCS:.c=.o)

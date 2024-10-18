@@ -6,7 +6,7 @@
 /*   By: edetoh <edetoh@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 11:13:45 by edetoh            #+#    #+#             */
-/*   Updated: 2024/10/18 15:53:59 by edetoh           ###   ########.fr       */
+/*   Updated: 2024/10/18 16:07:46 by edetoh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,5 +40,6 @@ int				ft_memcmp(const void *s1, const void *s2, size_t n);
 void			*ft_memchr(const void *str, int letter, size_t len);
 void			*ft_calloc(size_t count, size_t size);
 char			*ft_substr(char const *str, unsigned int start, size_t len);
+char			*ft_strdup(char *src);
 
 #endif

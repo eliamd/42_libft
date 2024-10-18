@@ -6,7 +6,7 @@
 /*   By: edetoh <edetoh@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/17 14:13:33 by edetoh            #+#    #+#             */
-/*   Updated: 2024/10/18 12:40:44 by edetoh           ###   ########.fr       */
+/*   Updated: 2024/10/18 16:10:22 by edetoh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,8 @@ char	*ft_strdup(char *src)
 		length++;
 	}
 	strduped = malloc((length + 1) * sizeof(char));
+	if (!strduped)
+		return (NULL);
 	i = 0;
 	while (i < length)
 	{

@@ -6,7 +6,7 @@
 /*   By: edetoh <edetoh@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 14:52:31 by edetoh            #+#    #+#             */
-/*   Updated: 2024/10/18 16:01:20 by edetoh           ###   ########.fr       */
+/*   Updated: 2024/10/18 16:11:52 by edetoh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,20 +24,21 @@ char	*ft_substr(char const *str, unsigned int start, size_t len)
 	size_t	i;
 	size_t	k;
 
-	sub_str = malloc(len * sizeof(char));
+	sub_str = malloc((len + 1) * sizeof(char));
 	if (!sub_str)
 		return (NULL);
 	i = 0;
 	k = 0;
 	while (str[i] != '\0')
 	{
-		if (i >= (start - 1) && k < len)
+		if (i >= start && k < len)
 		{
 			sub_str[k] = str[i];
 			k++;
 		}
 		i++;
 	}
+	sub_str[k] = '\0';
 	return (sub_str);
 }
 
@@ -48,8 +49,8 @@ char	*ft_substr(char const *str, unsigned int start, size_t len)
 // int main(void)
 // {
 // 	char *str = "1234567890";
-// 	unsigned int start = 9;
-// 	size_t lensent = 9;
+// 	unsigned int start = 100;
+// 	size_t lensent = 100;
 
 // 	char *res = ft_substr(str, start, lensent);
 
