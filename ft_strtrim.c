@@ -6,7 +6,7 @@
 /*   By: edetoh <edetoh@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 16:53:00 by edetoh            #+#    #+#             */
-/*   Updated: 2024/10/18 18:10:18 by edetoh           ###   ########.fr       */
+/*   Updated: 2024/10/19 10:41:49 by edetoh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,42 +90,6 @@ char	*ft_strtrim(char const *str, char const *str_del)
 	trimmed = ft_trim_rev(trimmed, str_del);
 	return (trimmed);
 }
-
-// char	*ft_substr(char const *str, unsigned int start, size_t len)
-// {
-// 	char	*sub_str;
-// 	size_t	i;
-// 	size_t	k;
-
-// 	sub_str = malloc((len + 1) * sizeof(char));
-// 	if (!sub_str)
-// 		return (NULL);
-// 	i = 0;
-// 	k = 0;
-// 	while (str[i] != '\0')
-// 	{
-// 		if (i >= start && k < len)
-// 		{
-// 			sub_str[k] = str[i];
-// 			k++;
-// 		}
-// 		i++;
-// 	}
-// 	sub_str[k] = '\0';
-// 	return (sub_str);
-// }
-
-// int	ft_strlen(char *str)
-// {
-// 	int	count;
-
-// 	count = 0;
-// 	while (str[count] != '\0')
-// 		count++;
-// 	return (count);
-// }
-
-//Pour les tests
 
 // #include  <string.h>
 // #include  <stdio.h>
