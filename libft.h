@@ -6,7 +6,7 @@
 /*   By: edetoh <edetoh@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 11:13:45 by edetoh            #+#    #+#             */
-/*   Updated: 2024/10/19 10:38:36 by edetoh           ###   ########.fr       */
+/*   Updated: 2024/10/19 13:17:15 by edetoh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,5 +44,6 @@ char			*ft_strdup(char *src);
 char			*ft_strjoin(char const *s1, char const *s2);
 char			*ft_strtrim(char const *str, char const *caract);
 char			**ft_split(char const *str, char del);
+char			*ft_itoa(int n);
 
 #endif
