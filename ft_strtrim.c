@@ -6,7 +6,7 @@
 /*   By: edetoh <edetoh@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 16:53:00 by edetoh            #+#    #+#             */
-/*   Updated: 2024/10/20 18:14:40 by edetoh           ###   ########.fr       */
+/*   Updated: 2024/10/20 18:24:50 by edetoh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,7 +103,7 @@ char	*ft_strtrim(char const *str, char const *str_del)
 
 // 	char *res = ft_strtrim(str, del);
 
-// 	printf("===== RESULT =====\n%s\n==================", res);
+// 	printf("d===== RESULT =====\n%s\n==================", res);
 
 // 	return (1);
 // }
