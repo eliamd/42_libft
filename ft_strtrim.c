@@ -6,7 +6,7 @@
 /*   By: edetoh <edetoh@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 16:53:00 by edetoh            #+#    #+#             */
-/*   Updated: 2024/10/20 18:24:50 by edetoh           ###   ########.fr       */
+/*   Updated: 2024/10/20 18:44:00 by edetoh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,9 +64,6 @@ char	*ft_trim_rev(char const *str, char const *str_del)
 	size_t	del_len;
 	size_t	i;
 
-	trimmed = malloc(ft_strlen((char *)str) * sizeof(char));
-	if (!trimmed)
-		return (NULL);
 	str_len = (size_t)ft_strlen((char *)str);
 	i = str_len;
 	del_len = 0;
@@ -82,28 +79,30 @@ char	*ft_trim_rev(char const *str, char const *str_del)
 char	*ft_strtrim(char const *str, char const *str_del)
 {
 	char	*trimmed;
+	char	*trimmed2;
 
 	if (!str || !str_del)
 		return (NULL);
 	trimmed = ft_trim(str, str_del);
 	if (!trimmed)
 		return (NULL);
-	trimmed = ft_trim_rev(trimmed, str_del);
-	return (trimmed);
+	trimmed2 = ft_trim_rev(trimmed, str_del);
+	free(trimmed);
+	return (trimmed2);
 }
 
-// #include  <string.h>
-// #include  <stdio.h>
-// #include  <unistd.h>
+#include  <string.h>
+#include  <stdio.h>
+#include  <unistd.h>
 
-// int main(void)
-// {
-// 	char *str = "vv";
-// 	char *del = "=+";
+int main(void)
+{
+	char *str = "==++=+++fefe=f=fe=fe===+=";
+	char *del = "=+";
 
-// 	char *res = ft_strtrim(str, del);
+	char *res = ft_strtrim(str, del);
 
-// 	printf("d===== RESULT =====\n%s\n==================", res);
-
-// 	return (1);
-// }
+	printf("d===== RESULTTTT =====\n%s\n==================", res);
+	free(res);
+	return (1);
+}
