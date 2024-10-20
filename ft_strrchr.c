@@ -6,7 +6,7 @@
 /*   By: edetoh <edetoh@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 15:54:44 by edetoh            #+#    #+#             */
-/*   Updated: 2024/10/18 11:39:28 by edetoh           ###   ########.fr       */
+/*   Updated: 2024/10/20 17:16:37 by edetoh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,21 +18,25 @@
  * Renvoie un pointeur vers le caractère trouvé, ou NULL.
  */
 
-char	*ft_strrchr(const char *str, int letter)
+char	*ft_strrchr(const char *str, int intletter)
 {
 	unsigned int	str_len;
 	char			*temp_str;
+	unsigned char	letter;
 
+	letter = (unsigned char)intletter;
 	temp_str = (char *)str;
 	str_len = 0;
 	while (temp_str[str_len])
 		str_len++;
 	while (str_len + 1 > 0)
 	{
-		if ((int)temp_str[str_len] == letter)
+		if ((unsigned char)temp_str[str_len] == letter)
 			return (&temp_str[str_len]);
 		str_len--;
 	}
+	if (letter == '\0')
+		return (&temp_str[str_len]);
 	return (NULL);
 }
 

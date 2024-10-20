@@ -6,7 +6,7 @@
 /*   By: edetoh <edetoh@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 16:53:00 by edetoh            #+#    #+#             */
-/*   Updated: 2024/10/19 10:41:49 by edetoh           ###   ########.fr       */
+/*   Updated: 2024/10/20 18:14:40 by edetoh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,10 +83,11 @@ char	*ft_strtrim(char const *str, char const *str_del)
 {
 	char	*trimmed;
 
-	trimmed = malloc(ft_strlen((char *)str) * sizeof(char));
-	if (!trimmed)
+	if (!str || !str_del)
 		return (NULL);
 	trimmed = ft_trim(str, str_del);
+	if (!trimmed)
+		return (NULL);
 	trimmed = ft_trim_rev(trimmed, str_del);
 	return (trimmed);
 }

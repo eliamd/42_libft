@@ -6,7 +6,7 @@
 /*   By: edetoh <edetoh@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 14:52:31 by edetoh            #+#    #+#             */
-/*   Updated: 2024/10/18 16:11:52 by edetoh           ###   ########.fr       */
+/*   Updated: 2024/10/20 17:40:45 by edetoh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,12 @@ char	*ft_substr(char const *str, unsigned int start, size_t len)
 	size_t	i;
 	size_t	k;
 
+	if (start >= (unsigned int)ft_strlen((char *)str))
+		return (ft_strdup(""));
+	if (len > ft_strlen((char *)str) - start)
+		len = ft_strlen((char *)str) - start;
 	sub_str = malloc((len + 1) * sizeof(char));
-	if (!sub_str)
+	if (!sub_str || !str)
 		return (NULL);
 	i = 0;
 	k = 0;

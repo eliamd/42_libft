@@ -6,7 +6,7 @@
 /*   By: edetoh <edetoh@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 15:54:44 by edetoh            #+#    #+#             */
-/*   Updated: 2024/10/18 11:39:26 by edetoh           ###   ########.fr       */
+/*   Updated: 2024/10/20 17:26:55 by edetoh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,21 +24,23 @@
 
 */
 
-void	*ft_memchr(const void *str, int letter, size_t len)
+void	*ft_memchr(const void *str, int intletter, size_t len)
 {
-	size_t	i;
-	char	*temp_str;
+	size_t			i;
+	char			*temp_str;
+	unsigned char	letter;
 
+	if (len == 0)
+		return (NULL);
+	letter = (unsigned char)intletter;
 	temp_str = (char *)str;
 	i = 0;
-	while (temp_str[i] && i < len)
+	while (i < len)
 	{
-		if ((int)temp_str[i] == letter)
+		if ((unsigned char)temp_str[i] == letter)
 			return (&temp_str[i]);
 		i++;
 	}
-	if (letter == '\0')
-		return (&temp_str[i]);
 	return (NULL);
 }
 
