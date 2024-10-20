@@ -6,7 +6,7 @@
 /*   By: edetoh <edetoh@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 16:53:00 by edetoh            #+#    #+#             */
-/*   Updated: 2024/10/20 18:44:00 by edetoh           ###   ########.fr       */
+/*   Updated: 2024/10/20 18:44:45 by edetoh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,18 +91,18 @@ char	*ft_strtrim(char const *str, char const *str_del)
 	return (trimmed2);
 }
 
-#include  <string.h>
-#include  <stdio.h>
-#include  <unistd.h>
+// #include  <string.h>
+// #include  <stdio.h>
+// #include  <unistd.h>
 
-int main(void)
-{
-	char *str = "==++=+++fefe=f=fe=fe===+=";
-	char *del = "=+";
+// int main(void)
+// {
+// 	char *str = "==++=+++fefe=f=fe=fe===+=";
+// 	char *del = "=+";
 
-	char *res = ft_strtrim(str, del);
+// 	char *res = ft_strtrim(str, del);
 
-	printf("d===== RESULTTTT =====\n%s\n==================", res);
-	free(res);
-	return (1);
-}
+// 	printf("d===== RESULTTTT =====\n%s\n==================", res);
+// 	free(res);
+// 	return (1);
+// }
