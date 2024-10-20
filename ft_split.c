@@ -6,7 +6,7 @@
 /*   By: edetoh <edetoh@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/19 10:31:59 by edetoh            #+#    #+#             */
-/*   Updated: 2024/10/19 12:16:16 by edetoh           ###   ########.fr       */
+/*   Updated: 2024/10/20 15:49:58 by edetoh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
  * Renvoie la sous-chaîne ou NULL en cas d'erreur.
  */
 
-static char	*tab_malloc(const char *str, int start, int len, char **tab)
+static char	*malloc_tab(const char *str, int start, int len, char **tab)
 {
 	char	*sub;
 	int		tablen;
@@ -44,18 +44,30 @@ static char	*tab_malloc(const char *str, int start, int len, char **tab)
 	return (sub);
 }
 
-char	**ft_split(char const *str, char del)
+char	**malloc_main_tab(char **tab, char const *str)
+{
+	if (str[0] == '\0')
+	{
+		tab = malloc(1 * sizeof(char *));
+		if (!tab)
+			return (NULL);
+		tab[0] = NULL;
+		return (tab);
+	}
+	tab = malloc((ft_strlen((char *)str + 1) * sizeof(char *)));
+	if (!tab)
+		return (NULL);
+	return (tab);
+}
+
+int	fill_tab(char const *str, char del, char **tab)
 {
 	int		i;
 	int		n;
 	int		k;
-	char	**tab;
 
 	i = 0;
 	k = 0;
-	tab = malloc((ft_strlen((char *)str + 1) * sizeof(char *)));
-	if (!tab || !str)
-		return (NULL);
 	while (str[i] != '\0')
 	{
 		n = 0;
@@ -64,12 +76,28 @@ char	**ft_split(char const *str, char del)
 		while (str[i + n] != '\0' && str[i + n] != del)
 			n++;
 		if (n != 0)
-			tab[k++] = tab_malloc(str, i, n, tab);
+			tab[k++] = malloc_tab(str, i, n, tab);
 		if ((k > 0 && tab[k - 1] == NULL) || !tab)
-			return (NULL);
+			return (0);
 		i = i + n;
 	}
-	tab[k] = 0;
+	tab[k] = NULL;
+	return (1);
+}
+
+char	**ft_split(char const *str, char del)
+{
+	char	**tab;
+
+	tab = NULL;
+	tab = malloc_main_tab(tab, str);
+	if (!tab)
+		return (NULL);
+	if (fill_tab(str, del, tab) == 0)
+	{
+		free(tab);
+		return (NULL);
+	}
 	return (tab);
 }
 
@@ -79,14 +107,14 @@ char	**ft_split(char const *str, char del)
 
 // int	main(void)
 // {
-// 	char *str = "Bonzour je suis zeliamzlezbgzclementzarretezdezcopierzmonzgit";
+// 	char *str = "";
 // 	char del = 'z';
 // 	int i = 0;
 
 // 	char **res = ft_split(str, del);
 
 // 	printf("===== RESULT =====\n");
-// 	while (i < 10)
+// 	while (i < 20)
 // 	{
 // 		printf("Tab DE %i : %s\n", i, res[i]);
 // 		i++;
