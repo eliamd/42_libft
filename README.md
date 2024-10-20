@@ -2,10 +2,12 @@
 
 ---
 
+<p align="center" width="100%">
+[![wakatime](https://wakatime.com/badge/github/eliamd/42_libft.svg)](https://wakatime.com/badge/github/eliamd/42_libft)
 [![eliamd - 42_libft](https://img.shields.io/static/v1?label=eliamd&message=42_libft&color=blue&logo=github)](https://github.com/eliamd/42_libft "Go to GitHub repo")
 [![stars - 42_libft](https://img.shields.io/github/stars/eliamd/42_libft?style=social)](https://github.com/eliamd/42_libft)
 [![forks - 42_libft](https://img.shields.io/github/forks/eliamd/42_libft?style=social)](https://github.com/eliamd/42_libft)
-[![wakatime](https://wakatime.com/badge/github/eliamd/42_libft.svg)](https://wakatime.com/badge/github/eliamd/42_libft)
+</p>
 
 ## Description
 
