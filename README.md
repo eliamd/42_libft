@@ -2,13 +2,10 @@
 
 ---
 
-<p align="center" width="100%">
 [![wakatime](https://wakatime.com/badge/github/eliamd/42_libft.svg)](https://wakatime.com/badge/github/eliamd/42_libft)
 [![eliamd - 42_libft](https://img.shields.io/static/v1?label=eliamd&message=42_libft&color=blue&logo=github)](https://github.com/eliamd/42_libft "Go to GitHub repo")
 [![stars - 42_libft](https://img.shields.io/github/stars/eliamd/42_libft?style=social)](https://github.com/eliamd/42_libft)
 [![forks - 42_libft](https://img.shields.io/github/forks/eliamd/42_libft?style=social)](https://github.com/eliamd/42_libft)
-</p>
-
 ## Description
 
 `libft` est un projet de la piscine 42 qui consiste à recréer une bibliothèque standard en C avec un ensemble de fonctions fréquemment utilisées en programmation. L'objectif est de développer une compréhension approfondie des fonctions de manipulation de chaînes, de mémoire et de gestion des caractères, qui sont largement utilisées dans le développement de logiciels.
