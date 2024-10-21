@@ -6,7 +6,7 @@
 /*   By: edetoh <edetoh@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/19 10:31:59 by edetoh            #+#    #+#             */
-/*   Updated: 2024/10/20 16:53:02 by edetoh           ###   ########.fr       */
+/*   Updated: 2024/10/21 11:06:24 by edetoh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,26 @@ static char	*malloc_tab(const char *str, int start, int len, char **tab)
 	return (sub);
 }
 
-char	**malloc_main_tab(char **tab, char const *str)
+int	count_words(char const *str, char del)
+{
+	int	i;
+	int	count;
+
+	i = 0;
+	count = 0;
+	while (str[i] != '\0')
+	{
+		while (str[i] == del)
+			i++;
+		if (str[i] != '\0')
+			count++;
+		while (str[i] != '\0' && str[i] != del)
+			i++;
+	}
+	return (count);
+}
+
+char	**malloc_main_tab(char **tab, char const *str, char del)
 {
 	if (str[0] == '\0')
 	{
@@ -54,7 +73,7 @@ char	**malloc_main_tab(char **tab, char const *str)
 		tab[0] = NULL;
 		return (tab);
 	}
-	tab = malloc((ft_strlen((char *)str + 1) * sizeof(char *)));
+	tab = malloc(((count_words(str, del) + 1) * sizeof(char *)));
 	if (!tab)
 		return (NULL);
 	return (tab);
@@ -90,7 +109,7 @@ char	**ft_split(char const *str, char del)
 	char	**tab;
 
 	tab = NULL;
-	tab = malloc_main_tab(tab, str);
+	tab = malloc_main_tab(tab, str, del);
 	if (!tab)
 		return (NULL);
 	if (fill_tab(str, del, tab) == 0)
