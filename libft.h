@@ -6,7 +6,7 @@
 /*   By: edetoh <edetoh@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 11:13:45 by edetoh            #+#    #+#             */
-/*   Updated: 2024/10/21 11:46:57 by edetoh           ###   ########.fr       */
+/*   Updated: 2024/10/21 13:13:35 by edetoh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,7 @@ typedef struct s_list
 	struct s_list	*next;
 }					t_list;
 
-int				ft_testb(const void *s1, const void *s2, size_t n);
+t_list			*ft_lstnew(void *content);
+void			ft_lstadd_front(t_list **lst, t_list *new);
 
 #endif
