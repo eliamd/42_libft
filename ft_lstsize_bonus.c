@@ -6,7 +6,7 @@
 /*   By: edetoh <edetoh@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 13:21:33 by edetoh            #+#    #+#             */
-/*   Updated: 2024/10/21 13:29:16 by edetoh           ###   ########.fr       */
+/*   Updated: 2024/10/21 13:49:48 by edetoh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,11 @@ int	ft_lstsize(t_list *lst)
 {
 	int	result;
 
-	result = 1;
-	while (lst->next != NULL)
+	result = 0;
+	while (lst)
 	{
-		*lst = *lst->next;
 		result++;
+		lst = lst->next;
 	}
 	return (result);
 }

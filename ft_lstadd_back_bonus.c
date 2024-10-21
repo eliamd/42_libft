@@ -1,26 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstlast_bonus.c                                 :+:      :+:    :+:   */
+/*   ft_lstadd_back_bonus.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: edetoh <edetoh@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/21 13:35:49 by edetoh            #+#    #+#             */
-/*   Updated: 2024/10/21 15:20:30 by edetoh           ###   ########.fr       */
+/*   Created: 2024/10/21 12:06:49 by edetoh            #+#    #+#             */
+/*   Updated: 2024/10/21 15:25:15 by edetoh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstlast(t_list *lst)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	if (!lst)
-		return (NULL);
-	while (lst && lst->next)
+	t_list	*last;
+
+	last = ft_lstlast(*lst);
+	if (!new || !lst)
+		return ;
+	new->next = NULL;
+	if (*lst == NULL)
 	{
-		lst = lst->next;
+		*lst = new;
 	}
-	return (lst);
+	else
+	{
+		if (!last)
+			return ;
+		last->next = new;
+	}
 }
 
 // #include <stdio.h>
@@ -36,7 +45,7 @@ t_list	*ft_lstlast(t_list *lst)
 // 	if (node)
 // 	{
 // 		printf("Node content: %s\n", (char *)node->content);
-// 		printf("Node next: %p\n", (void *)node->next);
+// 		printf("Node next bf add: %p\n", (void *)node->next);
 
 // 		t_list *newbuble1;
 // 		char *newbuble1_content = "Coucou";
@@ -45,11 +54,11 @@ t_list	*ft_lstlast(t_list *lst)
 // 		newbuble1 = ft_lstnew(newbuble1_content);
 // 		if (newbuble1)
 // 		{
-// 			ft_lstadd_front(&node, newbuble1);
-// 			printf("Node content after add: %s\n", (char *)node->content);
-// 			printf("Node next after add: %p\n", (void *)node->next);
-// 			printf(">>>>> Taille : %i\n", ft_lstsize(newbuble1));
-// 			printf(">>>>> Last : %s\n", (char *)ft_lstlast(newbuble1)->content);
+// 			ft_lstadd_back(&node, newbuble1);
+// 			printf(">> next cont aft add: %s\n", (char *)node->next->content);
+// 			printf(">> next after add: %p\n", (void *)node->next);
+// 			printf(">>>>> Taille : %i\n", ft_lstsize(node));
+// 			printf(">>>>> Last : %s\n", (char *)ft_lstlast(node)->content);
 
 // 		}
 // 		else
