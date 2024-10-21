@@ -6,7 +6,7 @@
 /*   By: edetoh <edetoh@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/19 13:16:47 by edetoh            #+#    #+#             */
-/*   Updated: 2024/10/19 15:21:36 by edetoh           ###   ########.fr       */
+/*   Updated: 2024/10/21 10:28:10 by edetoh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,8 @@ char	*ft_itoa(int n)
 	int		int_len;
 	int		nb;
 
+	if (n == -2147483648)
+		return (ft_strdup("-2147483648"));
 	int_len = ft_int_len(n);
 	str = malloc((int_len + 1) * sizeof(char));
 	if (!str)
@@ -59,8 +61,6 @@ char	*ft_itoa(int n)
 		str[--int_len] = (nb % 10) + '0';
 		nb = nb / 10;
 	}
-	if (n == -2147483648)
-		str = ft_strdup("-2147483648");
 	return (str);
 }
 
@@ -68,11 +68,12 @@ char	*ft_itoa(int n)
 // #include  <stdio.h>
 // #include  <unistd.h>
 
-// int	main(int argc, char **argv)
+// int	main(void)
 // {
-// 	(void)argc;
+// 	char *res = ft_itoa(-123456);
 // 	printf("===== RESULT iTOA =====\n");
-// 	printf("Res : %s\n", ft_itoa(ft_atoi(argv[1])));
+// 	printf("Res : %s\n", res);
 // 	printf("=======================\n");
+// 	free(res);
 // 	return (1);
 // }
