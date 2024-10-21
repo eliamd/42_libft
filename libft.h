@@ -6,7 +6,7 @@
 /*   By: edetoh <edetoh@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 11:13:45 by edetoh            #+#    #+#             */
-/*   Updated: 2024/10/19 16:51:40 by edetoh           ###   ########.fr       */
+/*   Updated: 2024/10/21 11:46:57 by edetoh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,5 +52,12 @@ void			ft_putchar_fd(char c, int fd);
 void			ft_putstr_fd(char *c, int fd);
 void			ft_putendl_fd(char *c, int fd);
 void			ft_putnbr_fd(int n, int fd);
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}					t_list;
+
+int				ft_testb(const void *s1, const void *s2, size_t n);
 
 #endif
