@@ -6,7 +6,7 @@
 /*   By: edetoh <edetoh@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 11:13:45 by edetoh            #+#    #+#             */
-/*   Updated: 2024/10/21 13:13:35 by edetoh           ###   ########.fr       */
+/*   Updated: 2024/10/21 13:14:47 by edetoh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,8 @@ void			ft_putchar_fd(char c, int fd);
 void			ft_putstr_fd(char *c, int fd);
 void			ft_putendl_fd(char *c, int fd);
 void			ft_putnbr_fd(int n, int fd);
+
+// >>>>>>> BONUS <<<<<<<
 typedef struct s_list
 {
 	void			*content;
