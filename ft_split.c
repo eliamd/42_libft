@@ -6,7 +6,7 @@
 /*   By: edetoh <edetoh@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/19 10:31:59 by edetoh            #+#    #+#             */
-/*   Updated: 2024/10/20 16:53:02 by edetoh           ###   ########.fr       */
+/*   Updated: 2024/10/22 18:23:25 by edetoh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,19 +22,16 @@
 static char	*malloc_tab(const char *str, int start, int len, char **tab)
 {
 	char	*sub;
-	int		tablen;
 	int		i;
 
-	i = 0;
-	tablen = 0;
-	while (tab[tablen] != NULL)
-		tablen++;
 	sub = malloc((len + 1) * sizeof(char));
 	if (!sub)
 	{
-		while (i < tablen)
+		i = 0;
+		while (tab && tab[i] != NULL)
 		{
-			free(tab[i]);
+			if (tab[i])
+				free(tab[i]);
 			i++;
 		}
 		free(tab);
@@ -44,7 +41,26 @@ static char	*malloc_tab(const char *str, int start, int len, char **tab)
 	return (sub);
 }
 
-char	**malloc_main_tab(char **tab, char const *str)
+int	count_words(char const *str, char del)
+{
+	int	i;
+	int	count;
+
+	i = 0;
+	count = 0;
+	while (str[i] != '\0')
+	{
+		while (str[i] == del)
+			i++;
+		if (str[i] != '\0')
+			count++;
+		while (str[i] != '\0' && str[i] != del)
+			i++;
+	}
+	return (count);
+}
+
+char	**malloc_main_tab(char **tab, char const *str, char del)
 {
 	if (str[0] == '\0')
 	{
@@ -54,7 +70,7 @@ char	**malloc_main_tab(char **tab, char const *str)
 		tab[0] = NULL;
 		return (tab);
 	}
-	tab = malloc((ft_strlen((char *)str + 1) * sizeof(char *)));
+	tab = malloc(((count_words(str, del) + 1) * sizeof(char *)));
 	if (!tab)
 		return (NULL);
 	return (tab);
@@ -85,15 +101,15 @@ int	fill_tab(char const *str, char del, char **tab)
 	return (1);
 }
 
-char	**ft_split(char const *str, char del)
+char	**ft_split(char const *s, char c)
 {
 	char	**tab;
 
 	tab = NULL;
-	tab = malloc_main_tab(tab, str);
+	tab = malloc_main_tab(tab, s, c);
 	if (!tab)
 		return (NULL);
-	if (fill_tab(str, del, tab) == 0)
+	if (fill_tab(s, c, tab) == 0)
 	{
 		free(tab);
 		return (NULL);

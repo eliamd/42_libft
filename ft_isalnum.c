@@ -6,20 +6,20 @@
 /*   By: edetoh <edetoh@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 12:48:17 by edetoh            #+#    #+#             */
-/*   Updated: 2024/10/14 13:35:05 by edetoh           ###   ########.fr       */
+/*   Updated: 2024/10/22 14:06:40 by edetoh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
  * La fonction ft_isalnum vérifie si un caractère est un chiffre ou une lettre.
- * Elle prend en argument un entier `nb` qui représente le caractère à vérifier.
+ * Elle prend en argument un entier `c` qui représente le caractère à vérifier.
  * Elle renvoie 1 si le caractère est un chiffre ou une lettre et 0 sinon.
  */
 
-int	ft_isalnum(int nb)
+int	ft_isalnum(int c)
 {
-	if (((nb >= 'A' && nb <= 'Z') || (nb >= 'a' && nb <= 'z')) || \
-	((nb >= '0' && nb <= '9')))
+	if (((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z')) || \
+	((c >= '0' && c <= '9')))
 		return (1);
 	return (0);
 }

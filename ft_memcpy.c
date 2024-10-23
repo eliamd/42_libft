@@ -6,7 +6,7 @@
 /*   By: edetoh <edetoh@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 09:54:04 by edetoh            #+#    #+#             */
-/*   Updated: 2024/10/15 14:44:17 by edetoh           ###   ########.fr       */
+/*   Updated: 2024/10/22 14:52:43 by edetoh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@
   fonction est généralement utilisée pour copier des blocs de mémoire.
  */
 
-void	*ft_memcpy(void *dest, const void *src, size_t count)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	unsigned char	*ptrsrc;
 	unsigned char	*ptrdest;
@@ -35,7 +35,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t count)
 	ptrsrc = (unsigned char *)src;
 	ptrdest = (unsigned char *)dest;
 	i = 0;
-	while (i < count)
+	while (i < n)
 	{
 		ptrdest[i] = ptrsrc[i];
 		i++;

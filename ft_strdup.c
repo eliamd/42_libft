@@ -6,7 +6,7 @@
 /*   By: edetoh <edetoh@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/17 14:13:33 by edetoh            #+#    #+#             */
-/*   Updated: 2024/10/18 16:10:22 by edetoh           ###   ########.fr       */
+/*   Updated: 2024/10/22 15:12:21 by edetoh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,14 @@
  * Renvoie un pointeur vers la nouvelle chaîne dupliquée.
  */
 
-char	*ft_strdup(char *src)
+char	*ft_strdup(const char *s)
 {
 	char	*strduped;
 	int		i;
 	int		length;
 
 	length = 0;
-	while (src[length] != '\0')
+	while (s[length] != '\0')
 	{
 		length++;
 	}
@@ -35,7 +35,7 @@ char	*ft_strdup(char *src)
 	i = 0;
 	while (i < length)
 	{
-		strduped[i] = src[i];
+		strduped[i] = s[i];
 		i++;
 	}
 	strduped[i] = '\0';

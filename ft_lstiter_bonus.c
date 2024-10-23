@@ -1,35 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_lstiter_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: edetoh <edetoh@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/19 16:34:23 by edetoh            #+#    #+#             */
-/*   Updated: 2024/10/22 14:26:07 by edetoh           ###   ########.fr       */
+/*   Created: 2024/10/22 11:21:16 by edetoh            #+#    #+#             */
+/*   Updated: 2024/10/22 11:31:30 by edetoh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr_fd(char *s, int fd)
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	int	str_len;
-
-	str_len = ft_strlen(s);
-	write(fd, s, str_len);
+	if (!lst || !f)
+		return ;
+	while (lst)
+	{
+		f(lst->content);
+		lst = lst->next;
+	}
 }
-
-// #include  <string.h>
-// #include  <stdio.h>
-// #include  <unistd.h>
-
-// int	main(int argc, char **argv)
-// {
-// 	(void)argc;
-// 	(void)argv;
-// 	printf("===== RESULT Putstr fd =====\n");
-// 	ft_putstr_fd("123", 1);
-// 	printf("=============================\n");
-// 	return (1);
-// }

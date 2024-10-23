@@ -6,7 +6,7 @@
 /*   By: edetoh <edetoh@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 12:48:17 by edetoh            #+#    #+#             */
-/*   Updated: 2024/10/14 15:37:48 by edetoh           ###   ########.fr       */
+/*   Updated: 2024/10/22 14:07:58 by edetoh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,18 @@
  * La fonction ft_isprint vérifie si un caractère est
  imprimable (y compris l'espace).
 
- * Elle prend en argument un entier `nb` qui représente le code
+ * Elle prend en argument un entier `c` qui représente le code
   ASCII du caractère à vérifier.
 
  * Elle renvoie 1 si le caractère est imprimable
  (dans la plage ASCII de 32 à 126 inclus) et 0 sinon.
  */
 
-int	ft_isprint(int nb)
+int	ft_isprint(int c)
 {
-	if ((nb >= 32 && nb <= 47) || \
-	(nb >= 40 && nb <= 47) || \
-	(nb >= 48 && nb <= 126))
+	if ((c >= 32 && c <= 47) || \
+	(c >= 40 && c <= 47) || \
+	(c >= 48 && c <= 126))
 		return (1);
 	return (0);
 }

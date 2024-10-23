@@ -6,7 +6,7 @@
 /*   By: edetoh <edetoh@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 15:19:43 by edetoh            #+#    #+#             */
-/*   Updated: 2024/10/15 15:23:58 by edetoh           ###   ########.fr       */
+/*   Updated: 2024/10/22 14:15:49 by edetoh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,11 @@
   une minuscule, sinon elle renvoie 'letter' tel quel.
  */
 
-int	ft_toupper(int letter)
+int	ft_toupper(int c)
 {
-	if (letter >= 'a' && letter <= 'z')
-		return (letter - 32);
-	return (letter);
+	if (c >= 'a' && c <= 'z')
+		return (c - 32);
+	return (c);
 }
 
 // #include <stdlib.h>

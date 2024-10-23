@@ -6,7 +6,7 @@
 /*   By: edetoh <edetoh@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 16:53:00 by edetoh            #+#    #+#             */
-/*   Updated: 2024/10/19 10:41:49 by edetoh           ###   ########.fr       */
+/*   Updated: 2024/10/22 16:15:07 by edetoh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,15 +38,15 @@ char	*ft_trim(char const *str, char const *str_del)
 	size_t	i;
 	size_t	n;
 
-	trimmed = malloc(ft_strlen((char *)str) * sizeof(char));
-	if (!trimmed)
-		return (NULL);
 	i = 0;
 	n = 0;
 	while (str[i] != '\0' && ft_is_a_del(str[i], str_del) == 1)
 	{
 		i++;
 	}
+	trimmed = malloc(((ft_strlen(str) - i) + 1) * sizeof(char));
+	if (!trimmed)
+		return (NULL);
 	while (str[i] != '\0')
 	{
 		trimmed[n] = str[i];
@@ -64,13 +64,10 @@ char	*ft_trim_rev(char const *str, char const *str_del)
 	size_t	del_len;
 	size_t	i;
 
-	trimmed = malloc(ft_strlen((char *)str) * sizeof(char));
-	if (!trimmed)
-		return (NULL);
 	str_len = (size_t)ft_strlen((char *)str);
 	i = str_len;
 	del_len = 0;
-	while (ft_is_a_del(str[i - 1], str_del) == 1)
+	while (i > 0 && ft_is_a_del(str[i - 1], str_del) == 1)
 	{
 		del_len++;
 		i--;
@@ -79,16 +76,23 @@ char	*ft_trim_rev(char const *str, char const *str_del)
 	return (trimmed);
 }
 
-char	*ft_strtrim(char const *str, char const *str_del)
+char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*trimmed;
+	char	*trimmed2;
 
-	trimmed = malloc(ft_strlen((char *)str) * sizeof(char));
+	if (!s1 || !set)
+		return (NULL);
+	if (s1[0] == 0)
+		return (ft_strdup(""));
+	if (set[0] == 0)
+		return (ft_strdup(s1));
+	trimmed = ft_trim(s1, set);
 	if (!trimmed)
 		return (NULL);
-	trimmed = ft_trim(str, str_del);
-	trimmed = ft_trim_rev(trimmed, str_del);
-	return (trimmed);
+	trimmed2 = ft_trim_rev(trimmed, set);
+	free(trimmed);
+	return (trimmed2);
 }
 
 // #include  <string.h>
@@ -97,12 +101,12 @@ char	*ft_strtrim(char const *str, char const *str_del)
 
 // int main(void)
 // {
-// 	char *str = "vv";
-// 	char *del = "=+";
+// 	char *str = "ab cd  f    ";
+// 	char *del = " ";
 
 // 	char *res = ft_strtrim(str, del);
 
-// 	printf("===== RESULT =====\n%s\n==================", res);
-
+// 	printf("d===== RESULTTTT =====\n%s\n==================", res);
+// 	free(res);
 // 	return (1);
 // }

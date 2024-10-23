@@ -6,7 +6,7 @@
 /*   By: edetoh <edetoh@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 14:52:31 by edetoh            #+#    #+#             */
-/*   Updated: 2024/10/18 16:11:52 by edetoh           ###   ########.fr       */
+/*   Updated: 2024/10/22 14:23:44 by edetoh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,22 +18,26 @@
  * et 'len' (longueur de la sous-chaîne). Renvoie la sous-chaîne.
  */
 
-char	*ft_substr(char const *str, unsigned int start, size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*sub_str;
 	size_t	i;
 	size_t	k;
 
+	if (start >= (unsigned int)ft_strlen((char *)s))
+		return (ft_strdup(""));
+	if (len > ft_strlen((char *)s) - start)
+		len = ft_strlen((char *)s) - start;
 	sub_str = malloc((len + 1) * sizeof(char));
-	if (!sub_str)
+	if (!sub_str || !s)
 		return (NULL);
 	i = 0;
 	k = 0;
-	while (str[i] != '\0')
+	while (s[i] != '\0')
 	{
 		if (i >= start && k < len)
 		{
-			sub_str[k] = str[i];
+			sub_str[k] = s[i];
 			k++;
 		}
 		i++;

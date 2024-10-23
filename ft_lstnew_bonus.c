@@ -1,43 +1,49 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_lstnew_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: edetoh <edetoh@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/18 11:42:36 by edetoh            #+#    #+#             */
-/*   Updated: 2024/10/22 15:09:56 by edetoh           ###   ########.fr       */
+/*   Created: 2024/10/21 12:06:49 by edetoh            #+#    #+#             */
+/*   Updated: 2024/10/21 12:17:58 by edetoh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t nmemb, size_t size)
+t_list	*ft_lstnew(void *content)
 {
-	void	*obj;
+	t_list	*list;
 
-	if (nmemb == 0 || size == 0)
-		return (malloc(0));
-	obj = malloc(nmemb * size);
-	if (!obj)
+	list = malloc(sizeof(t_list));
+	if (!list)
 		return (NULL);
-	ft_bzero(obj, nmemb * size);
-	return (obj);
+	list->content = content;
+	list->next = NULL;
+	return (list);
 }
 
 // #include <stdio.h>
-// #include <string.h>
+// #include "libft.h"
 
 // int main(void)
 // {
-// 	int		size = 8539;
-// 	void	*d1 = ft_calloc(size, sizeof(int));
-// 	void	*d2 = calloc(size, sizeof(int));
+// 	t_list *node;
+// 	char *content = "Hello, world!";
 
-// 	if (memcmp(d1, d2, size * sizeof(int)))
-// 		printf("ERROR");
-// 	free(d1);
-// 	free(d2);
-// 	printf("OK");
-// 	return (0);
+// 	node = ft_lstnew(content);
+// 	if (node)
+// 	{
+// 		printf("Node content: %s\n", (char *)node->content);
+// 		printf("Node next: %p\n", (void *)node->next);
+// 	}
+// 	else
+// 	{
+// 		printf("Failed to create node\n");
+// 	}
+
+// 	free(node);
+
+// 	return 0;
 // }

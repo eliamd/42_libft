@@ -6,7 +6,7 @@
 /*   By: edetoh <edetoh@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 15:19:43 by edetoh            #+#    #+#             */
-/*   Updated: 2024/10/15 15:25:59 by edetoh           ###   ########.fr       */
+/*   Updated: 2024/10/22 14:16:58 by edetoh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,11 @@
    une majuscule, sinon elle renvoie 'letter' tel quel.
  */
 
-int	ft_tolower(int letter)
+int	ft_tolower(int c)
 {
-	if (letter >= 'A' && letter <= 'Z')
-		return (letter + 32);
-	return (letter);
+	if (c >= 'A' && c <= 'Z')
+		return (c + 32);
+	return (c);
 }
 
 // #include <stdlib.h>

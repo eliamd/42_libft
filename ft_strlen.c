@@ -6,9 +6,11 @@
 /*   By: edetoh <edetoh@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 12:48:17 by edetoh            #+#    #+#             */
-/*   Updated: 2024/10/14 15:46:34 by edetoh           ###   ########.fr       */
+/*   Updated: 2024/10/22 14:38:06 by edetoh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 /*
  * La fonction ft_strlen calcule la longueur d'une chaîne de caractères.
@@ -17,12 +19,12 @@
   sans compter le caractère de fin de chaîne ('\0').
  */
 
-int	ft_strlen(char *str)
+size_t	ft_strlen(const char *s)
 {
 	int	count;
 
 	count = 0;
-	while (str[count] != '\0')
+	while (s[count] != '\0')
 		count++;
 	return (count);
 }

@@ -6,7 +6,7 @@
 /*   By: edetoh <edetoh@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 11:36:24 by edetoh            #+#    #+#             */
-/*   Updated: 2024/10/15 14:30:56 by edetoh           ###   ########.fr       */
+/*   Updated: 2024/10/22 14:49:21 by edetoh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 /*
  * La fonction ft_atoi convertit une chaîne de caractères en un entier.
- * Elle prend en argument une chaîne de caractères `str`.
+ * Elle prend en argument une chaîne de caractères `nptr`.
  * Elle renvoie le nombre entier correspondant à la chaîne d'entrée.
  */
 
-int	ft_atoi(const char *str)
+int	ft_atoi(const char *nptr)
 {
 	int	i;
 	int	sign;
@@ -27,17 +27,17 @@ int	ft_atoi(const char *str)
 	i = 0;
 	sign = 0;
 	n = 0;
-	while (((str[i] >= 9 && str[i] <= 13) || str[i] == 32) && str[i])
+	while (((nptr[i] >= 9 && nptr[i] <= 13) || nptr[i] == 32) && nptr[i])
 		i++;
-	if (str[i] == '-' || str[i] == '+')
+	if (nptr[i] == '-' || nptr[i] == '+')
 	{
-		if (str[i] == '-')
+		if (nptr[i] == '-')
 			sign++;
 		i++;
 	}
-	while (str[i] >= '0' && str[i] <= '9')
+	while (nptr[i] >= '0' && nptr[i] <= '9')
 	{
-		n = n * 10 + (str[i] - '0');
+		n = n * 10 + (nptr[i] - '0');
 		i++;
 	}
 	if (sign % 2)

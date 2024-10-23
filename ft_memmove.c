@@ -6,7 +6,7 @@
 /*   By: edetoh <edetoh@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 11:08:16 by edetoh            #+#    #+#             */
-/*   Updated: 2024/10/18 11:01:28 by edetoh           ###   ########.fr       */
+/*   Updated: 2024/10/22 18:41:19 by edetoh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,26 +24,26 @@
  Cette fonction est généralement utilisée pour déplacer des blocs de mémoire.
  */
 
-void	*ft_memmove(void *dest, const void *src, size_t count)
+void	*ft_memmove(void *dst, const void *src, size_t n)
 {
 	unsigned char	*ptrsrc;
 	unsigned char	*ptrdest;
 
 	ptrsrc = (unsigned char *)src;
-	ptrdest = (unsigned char *)dest;
-	if (ptrdest == ptrsrc || count == 0)
-		return (dest);
-	if (ptrdest > ptrsrc && ptrdest < (ptrsrc + count))
+	ptrdest = (unsigned char *)dst;
+	if (ptrdest == ptrsrc || n == 0)
+		return (dst);
+	if (ptrdest > ptrsrc && ptrdest < (ptrsrc + n))
 	{
-		while (count > 0)
+		while (n > 0)
 		{
-			count--;
-			ptrdest[count] = ptrsrc[count];
+			n--;
+			ptrdest[n] = ptrsrc[n];
 		}
 	}
 	else
 	{
-		ft_memcpy(dest, src, count);
+		ft_memcpy(dst, src, n);
 	}
 	return (ptrdest);
 }

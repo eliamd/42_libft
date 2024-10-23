@@ -6,7 +6,7 @@
 /*   By: edetoh <edetoh@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 15:54:44 by edetoh            #+#    #+#             */
-/*   Updated: 2024/10/17 14:19:25 by edetoh           ###   ########.fr       */
+/*   Updated: 2024/10/22 14:17:41 by edetoh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,16 +24,18 @@
 
 */
 
-char	*ft_strchr(const char *str, int letter)
+char	*ft_strchr(const char *s, int c)
 {
-	size_t	i;
-	char	*temp_str;
+	size_t			i;
+	char			*temp_str;
+	unsigned char	letter;
 
-	temp_str = (char *)str;
+	letter = (unsigned char)c;
+	temp_str = (char *)s;
 	i = 0;
 	while (temp_str[i])
 	{
-		if ((int)temp_str[i] == letter)
+		if ((unsigned char)temp_str[i] == letter)
 			return (&temp_str[i]);
 		i++;
 	}

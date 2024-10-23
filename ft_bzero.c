@@ -6,7 +6,7 @@
 /*   By: edetoh <edetoh@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 09:39:13 by edetoh            #+#    #+#             */
-/*   Updated: 2024/10/15 11:26:19 by edetoh           ###   ########.fr       */
+/*   Updated: 2024/10/22 14:10:19 by edetoh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,14 +24,14 @@
 
  */
 
-void	ft_bzero(void *pointer, size_t count)
+void	ft_bzero(void *s, size_t n)
 {
 	unsigned char	*ptr;
 	size_t			i;
 
-	ptr = (unsigned char *)pointer;
+	ptr = (unsigned char *)s;
 	i = 0;
-	while (i < count)
+	while (i < n)
 	{
 		ptr[i] = 0;
 		i++;

@@ -6,7 +6,7 @@
 /*   By: edetoh <edetoh@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 16:05:01 by edetoh            #+#    #+#             */
-/*   Updated: 2024/10/15 11:24:36 by edetoh           ###   ########.fr       */
+/*   Updated: 2024/10/22 14:51:43 by edetoh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,16 +25,16 @@
    une zone mémoire à une valeur spécifique.
  */
 
-void	*ft_memset(void *pointer, int value, size_t count)
+void	*ft_memset(void *s, int c, size_t len)
 {
 	unsigned char	*ptr;
 	size_t			i;
 
-	ptr = (unsigned char *)pointer;
+	ptr = (unsigned char *)s;
 	i = 0;
-	while (i < count)
+	while (i < len)
 	{
-		ptr[i] = (unsigned char)value;
+		ptr[i] = (unsigned char)c;
 		i++;
 	}
 	return (ptr);

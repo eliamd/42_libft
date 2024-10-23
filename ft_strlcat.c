@@ -6,7 +6,7 @@
 /*   By: edetoh <edetoh@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 13:22:17 by edetoh            #+#    #+#             */
-/*   Updated: 2024/10/15 15:10:03 by edetoh           ###   ########.fr       */
+/*   Updated: 2024/10/22 14:57:08 by edetoh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@
    en évitant les débordements de tampon.
  */
 
-size_t	ft_strlcat(char *dest, char *src, \
+size_t	ft_strlcat(char *dst, const char *src, \
 	size_t size)
 {
 	unsigned int	dest_len;
@@ -36,17 +36,17 @@ size_t	ft_strlcat(char *dest, char *src, \
 	src_len = 0;
 	while (src[src_len] != '\0')
 		++src_len;
-	while (dest[dest_len] != '\0' && dest_len < size)
+	while (dst[dest_len] != '\0' && dest_len < size)
 		++dest_len;
 	if (dest_len == size)
 		return (dest_len + src_len);
 	i = 0;
 	while (i < src_len && (dest_len + i + 1) < size)
 	{
-		dest[dest_len + i] = src[i];
+		dst[dest_len + i] = src[i];
 		++i;
 	}
-	dest[dest_len + i] = '\0';
+	dst[dest_len + i] = '\0';
 	return (dest_len + src_len);
 }
 
