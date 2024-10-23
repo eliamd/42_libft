@@ -99,14 +99,11 @@ bonus: $(OBJS) $(OBJS_BONUS)
 	@echo ">>>>> Bonus ajoutés avec succès. <<<<<"
 	@echo " "
 
-# Compilation des fichiers objets (dans $(OBJ_DIR))
-%.o: %.c | $(OBJ_DIR)
+# Compilation des fichiers objets
+%.o: %.c
 	@echo ">>>>> Compilation de $< ... <<<<<"
 	$(CC) $(CFLAGS) -c $< -o $@
 
-# Création du répertoire pour les objets
-$(OBJ_DIR):
-	@mkdir -p $(OBJ_DIR)
 
 # **************************************************************************** #
 #                                 NETTOYAGE                                    #
@@ -118,7 +115,6 @@ clean:
 	@echo ">>>>> Nettoyage des fichiers objets... <<<<<"
 	@echo " "
 	$(RM) $(OBJS) $(OBJS_BONUS)
-	@rmdir $(OBJ_DIR) 2> /dev/null || true
 	@echo " "
 	@echo ">>>>> Nettoyage terminé. <<<<<"
 	@echo " "
