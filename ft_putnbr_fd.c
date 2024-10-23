@@ -6,11 +6,17 @@
 /*   By: edetoh <edetoh@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/19 16:51:10 by edetoh            #+#    #+#             */
-/*   Updated: 2024/10/19 17:21:21 by edetoh           ###   ########.fr       */
+/*   Updated: 2024/10/23 14:33:08 by edetoh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+ft_putnbr_fd écrit le nombre 'n' dans le fichier 'fd'.
+Prend 'n' (nombre à écrire) et 'fd' (descripteur de fichier).
+Utilise write() pour écrire le nombre dans le fichier.
+*/
 
 void	ft_putnbr_fd(int n, int fd)
 {

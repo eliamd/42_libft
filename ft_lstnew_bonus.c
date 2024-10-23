@@ -6,11 +6,17 @@
 /*   By: edetoh <edetoh@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 12:06:49 by edetoh            #+#    #+#             */
-/*   Updated: 2024/10/21 12:17:58 by edetoh           ###   ########.fr       */
+/*   Updated: 2024/10/23 14:43:20 by edetoh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+ft_lstnew crée un nouvel élément de liste avec 'content'.
+Prend 'content' (donnée à stocker).
+Renvoie un pointeur vers le nouvel élément, ou NULL en cas d'échec.
+*/
 
 t_list	*ft_lstnew(void *content)
 {

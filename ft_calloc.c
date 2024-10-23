@@ -6,11 +6,21 @@
 /*   By: edetoh <edetoh@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 11:42:36 by edetoh            #+#    #+#             */
-/*   Updated: 2024/10/22 15:09:56 by edetoh           ###   ########.fr       */
+/*   Updated: 2024/10/23 14:36:51 by edetoh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/* ft_calloc alloue de la mémoire pour un tableau de
+'nmemb' éléments de 'size' octets chacun.
+
+Prend 'nmemb' (nombre d'éléments) et
+'size' (taille de chaque élément).
+
+Initialise la mémoire à zéro et renvoie un pointeur vers elle,
+ou NULL en cas d'échec.
+*/
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {

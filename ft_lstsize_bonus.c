@@ -6,11 +6,17 @@
 /*   By: edetoh <edetoh@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 13:21:33 by edetoh            #+#    #+#             */
-/*   Updated: 2024/10/21 13:49:48 by edetoh           ###   ########.fr       */
+/*   Updated: 2024/10/23 14:44:05 by edetoh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+ft_lstsize compte le nombre d'éléments dans 'lst'.
+Prend 'lst' (liste chaînée).
+Renvoie le nombre d'éléments dans la liste.
+*/
 
 int	ft_lstsize(t_list *lst)
 {

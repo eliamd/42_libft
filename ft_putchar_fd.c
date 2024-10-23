@@ -6,11 +6,16 @@
 /*   By: edetoh <edetoh@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/19 16:34:23 by edetoh            #+#    #+#             */
-/*   Updated: 2024/10/19 16:37:59 by edetoh           ###   ########.fr       */
+/*   Updated: 2024/10/23 14:34:49 by edetoh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/* ft_putchar_fd écrit le caractère 'c' dans 'fd'.
+Prend 'c' (caractère à écrire) et 'fd' (descripteur de fichier).
+Utilise write() pour écrire le caractère.
+*/
 
 void	ft_putchar_fd(char c, int fd)
 {

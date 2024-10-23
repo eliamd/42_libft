@@ -6,11 +6,20 @@
 /*   By: edetoh <edetoh@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 12:06:49 by edetoh            #+#    #+#             */
-/*   Updated: 2024/10/22 18:49:26 by edetoh           ###   ########.fr       */
+/*   Updated: 2024/10/23 14:38:03 by edetoh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+ft_lstadd_back ajoute 'new' à la fin de 'lst'.
+
+Prend 'lst' (adresse du pointeur vers le début de la liste)
+et 'new' (nouvel élément à ajouter).
+
+Ne renvoie rien.
+*/
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {

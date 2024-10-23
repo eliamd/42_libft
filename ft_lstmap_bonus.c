@@ -6,11 +6,21 @@
 /*   By: edetoh <edetoh@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 11:33:24 by edetoh            #+#    #+#             */
-/*   Updated: 2024/10/22 18:36:09 by edetoh           ###   ########.fr       */
+/*   Updated: 2024/10/23 14:42:31 by edetoh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+ft_lstmap applique 'f' à chaque élément de 'lst'
+et crée une nouvelle liste.
+
+Prend 'lst' (liste chaînée), 'f' (fonction à appliquer)
+et 'del' (fonction pour libérer le contenu).
+
+Renvoie la nouvelle liste, ou NULL en cas d'échec.
+*/
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {

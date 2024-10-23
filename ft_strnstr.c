@@ -6,11 +6,17 @@
 /*   By: edetoh <edetoh@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 15:20:52 by edetoh            #+#    #+#             */
-/*   Updated: 2024/10/22 15:22:34 by edetoh           ###   ########.fr       */
+/*   Updated: 2024/10/23 14:31:53 by edetoh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+ * ft_strnstr cherche 'little' dans 'big' jusqu'à 'len' caractères.
+ * Prend 'big' (chaîne principale) et 'little' (sous-chaîne).
+ * Renvoie un pointeur vers le début de 'little' dans 'big', ou NULL.
+ */
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
