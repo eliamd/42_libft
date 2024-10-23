@@ -6,7 +6,7 @@
 /*   By: edetoh <edetoh@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/19 10:31:59 by edetoh            #+#    #+#             */
-/*   Updated: 2024/10/22 18:23:25 by edetoh           ###   ########.fr       */
+/*   Updated: 2024/10/23 12:44:13 by edetoh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,29 +19,18 @@
  * Renvoie la sous-chaîne ou NULL en cas d'erreur.
  */
 
-static char	*malloc_tab(const char *str, int start, int len, char **tab)
+static char	*malloc_tab(const char *str, int start, int len)
 {
 	char	*sub;
-	int		i;
 
 	sub = malloc((len + 1) * sizeof(char));
 	if (!sub)
-	{
-		i = 0;
-		while (tab && tab[i] != NULL)
-		{
-			if (tab[i])
-				free(tab[i]);
-			i++;
-		}
-		free(tab);
 		return (NULL);
-	}
 	ft_strlcpy(sub, (char *)str + start, len + 1);
 	return (sub);
 }
 
-int	count_words(char const *str, char del)
+static int	count_words(char const *str, char del)
 {
 	int	i;
 	int	count;
@@ -60,7 +49,7 @@ int	count_words(char const *str, char del)
 	return (count);
 }
 
-char	**malloc_main_tab(char **tab, char const *str, char del)
+static char	**malloc_main_tab(char **tab, char const *str, char del)
 {
 	if (str[0] == '\0')
 	{
@@ -76,7 +65,7 @@ char	**malloc_main_tab(char **tab, char const *str, char del)
 	return (tab);
 }
 
-int	fill_tab(char const *str, char del, char **tab)
+static int	fill_tab(char const *str, char del, char **tab)
 {
 	int		i;
 	int		n;
@@ -92,7 +81,7 @@ int	fill_tab(char const *str, char del, char **tab)
 		while (str[i + n] != '\0' && str[i + n] != del)
 			n++;
 		if (n != 0)
-			tab[k++] = malloc_tab(str, i, n, tab);
+			tab[k++] = malloc_tab(str, i, n);
 		if ((k > 0 && tab[k - 1] == NULL) || !tab)
 			return (0);
 		i = i + n;
@@ -104,13 +93,19 @@ int	fill_tab(char const *str, char del, char **tab)
 char	**ft_split(char const *s, char c)
 {
 	char	**tab;
+	int		i;
 
+	if (!s)
+		return (NULL);
+	i = 0;
 	tab = NULL;
 	tab = malloc_main_tab(tab, s, c);
 	if (!tab)
 		return (NULL);
 	if (fill_tab(s, c, tab) == 0)
 	{
+		while (tab[i] != NULL)
+			free(tab[i++]);
 		free(tab);
 		return (NULL);
 	}
