@@ -6,7 +6,7 @@
 /*   By: edetoh <edetoh@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/19 13:16:47 by edetoh            #+#    #+#             */
-/*   Updated: 2024/10/21 10:28:10 by edetoh           ###   ########.fr       */
+/*   Updated: 2024/10/23 14:28:36 by edetoh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
  * l'entier ou NULL en cas d'erreur.
  */
 
-int	ft_int_len(int n)
+static int	ft_int_len(int n)
 {
 	int	len;
 

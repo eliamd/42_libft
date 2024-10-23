@@ -6,7 +6,7 @@
 /*   By: edetoh <edetoh@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 16:53:00 by edetoh            #+#    #+#             */
-/*   Updated: 2024/10/22 16:15:07 by edetoh           ###   ########.fr       */
+/*   Updated: 2024/10/23 14:29:46 by edetoh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
  * Renvoie une nouvelle chaîne sans les caractères spécifiés.
  */
 
-int	ft_is_a_del(char caract, char const *str_del)
+static int	ft_is_a_del(char caract, char const *str_del)
 {
 	int	i;
 
@@ -32,7 +32,7 @@ int	ft_is_a_del(char caract, char const *str_del)
 	return (0);
 }
 
-char	*ft_trim(char const *str, char const *str_del)
+static char	*ft_trim(char const *str, char const *str_del)
 {
 	char	*trimmed;
 	size_t	i;
@@ -57,7 +57,7 @@ char	*ft_trim(char const *str, char const *str_del)
 	return (trimmed);
 }
 
-char	*ft_trim_rev(char const *str, char const *str_del)
+static char	*ft_trim_rev(char const *str, char const *str_del)
 {
 	char	*trimmed;
 	size_t	str_len;
