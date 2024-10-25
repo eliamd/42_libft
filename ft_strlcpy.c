@@ -6,23 +6,23 @@
 /*   By: edetoh <edetoh@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/28 18:37:49 by edetoh            #+#    #+#             */
-/*   Updated: 2024/10/22 15:18:29 by edetoh           ###   ########.fr       */
+/*   Updated: 2024/10/25 11:18:17 by edetoh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
- * La fonction ft_strlcpy copie 'size' caractères de la chaîne
-  'src' vers la chaîne 'dest'.
+ * The ft_strlcpy function copies 'size' characters from the string
+  string to the 'dest' string.
 
- * Elle prend trois arguments : un pointeur 'dest' vers la chaîne
-   de destination, un pointeur 'src' vers la chaîne source, et un unsigned
-   int 'size' qui est le nombre de caractères à copier.
+ * It takes three arguments: a 'dest' pointer to the destination string
+   destination string, a 'src' pointer to the source string, and an unsigned
+   int 'size' which is the number of characters to be copied.
 
- * Elle renvoie la longueur totale de la chaîne 'src'. Cette fonction est
-   généralement utilisée pour copier des chaînes de manière sécurisée,
-   en évitant les débordements de tampon.
+ * It returns the total length of the 'src' string. This function is
+   generally used to copy strings securely,
+   avoiding buffer overflows.
  */
 
 size_t	ft_strlcpy(char *dst, const char *src, unsigned int size)

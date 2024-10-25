@@ -6,14 +6,14 @@
 /*   By: edetoh <edetoh@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 12:48:17 by edetoh            #+#    #+#             */
-/*   Updated: 2024/10/22 14:05:48 by edetoh           ###   ########.fr       */
+/*   Updated: 2024/10/25 11:10:05 by edetoh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
- * La fonction ft_isalpha vérifie si un caractère est une lettre alphabétique.
- * Elle prend en argument un entier `c` qui représente le caractère à vérifier.
- * Elle renvoie 1 si le caractère est une lettre (maj ou min) et 0 sinon.
+ * The ft_isalpha function checks whether a character is an alphabetical letter.
+ * It takes as argument an integer `c` representing the character to be checked.
+ * It returns 1 if the character is a letter (maj or min) and 0 otherwise.
  */
 
 int	ft_isalpha(int c)

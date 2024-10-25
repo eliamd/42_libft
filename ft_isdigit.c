@@ -6,14 +6,15 @@
 /*   By: edetoh <edetoh@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 12:48:17 by edetoh            #+#    #+#             */
-/*   Updated: 2024/10/22 14:06:15 by edetoh           ###   ########.fr       */
+/*   Updated: 2024/10/25 11:10:37 by edetoh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
- * La fonction ft_isdigit vérifie si un caractère est un chiffre.
- * Elle prend en argument un entier `c` qui le caractère à vérifier.
- * Elle renvoie 1 si le caractère est un chiffre (entre '0' et '9') et 0 sinon.
+ * The ft_isdigit function checks whether a character is a digit.
+ * It takes as argument an integer `c` which is the character to be checked.
+ * It returns 1 if the character is a digit
+ * (between '0' and '9') and 0 otherwise.
  */
 
 int	ft_isdigit(int c)

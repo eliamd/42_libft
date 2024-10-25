@@ -6,16 +6,16 @@
 /*   By: edetoh <edetoh@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 12:06:49 by edetoh            #+#    #+#             */
-/*   Updated: 2024/10/21 13:14:00 by edetoh           ###   ########.fr       */
+/*   Updated: 2024/10/25 11:12:10 by edetoh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
- * ft_lstadd_front ajoute un nœud au début de la liste.
- * Prend 'lst' (adresse du pointeur vers la liste) et
- * 'new' (nouveau nœud). Ne renvoie rien.
+ * ft_lstadd_front adds a node to the beginning of the list.
+ * Takes 'lst' (address of pointer to list) and
+ * new' (new node). Returns nothing.
  */
 
 void	ft_lstadd_front(t_list **lst, t_list *new)

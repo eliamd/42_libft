@@ -6,16 +6,16 @@
 /*   By: edetoh <edetoh@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/19 16:34:23 by edetoh            #+#    #+#             */
-/*   Updated: 2024/10/23 14:33:13 by edetoh           ###   ########.fr       */
+/*   Updated: 2024/10/25 11:16:05 by edetoh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-ft_putstr_fd écrit la chaîne 's' dans le fichier 'fd'.
-Prend 's' (chaîne à écrire) et 'fd' (descripteur de fichier).
-Utilise write() pour écrire la chaîne dans le fichier.
+ft_putstr_fd writes string 's' to file 'fd'.
+Takes 's' (string to write) and 'fd' (file descriptor).
+Uses write() to write the string to the file.
 */
 
 void	ft_putstr_fd(char *s, int fd)

@@ -6,17 +6,17 @@
 /*   By: edetoh <edetoh@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 12:48:17 by edetoh            #+#    #+#             */
-/*   Updated: 2024/10/22 14:38:06 by edetoh           ###   ########.fr       */
+/*   Updated: 2024/10/25 11:18:31 by edetoh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
- * La fonction ft_strlen calcule la longueur d'une chaîne de caractères.
- * Elle prend en argument une chaîne de caractères `str`.
- * Elle renvoie le nombre de caractères dans la chaîne,
-  sans compter le caractère de fin de chaîne ('\0').
+ * The ft_strlen function calculates the length of a character string.
+ * It takes a string `str` as argument.
+ * It returns the number of characters in the string,
+  excluding the end-of-string character ('\0').
  */
 
 size_t	ft_strlen(const char *s)

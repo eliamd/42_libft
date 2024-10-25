@@ -6,14 +6,15 @@
 /*   By: edetoh <edetoh@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 12:48:17 by edetoh            #+#    #+#             */
-/*   Updated: 2024/10/22 14:07:18 by edetoh           ###   ########.fr       */
+/*   Updated: 2024/10/25 11:10:22 by edetoh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
- * La fonction ft_isascii vérifie si un caractère est dans la plage ASCII.
- * Elle prend en argument un entier `c` qui représente le caractère à vérifier.
- * Elle renvoie 1 si le caractère est dans ASCII (0 à 127 inclus) et 0 sinon.
+ * The ft_isascii function checks whether a character is within the ASCII range.
+ * It takes as argument an integer `c` representing the character to be checked.
+ * It returns 1 if the character is in ASCII
+ * (0 to 127 inclusive) and 0 otherwise.
  */
 
 int	ft_isascii(int c)

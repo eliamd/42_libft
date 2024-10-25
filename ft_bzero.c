@@ -6,22 +6,22 @@
 /*   By: edetoh <edetoh@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 09:39:13 by edetoh            #+#    #+#             */
-/*   Updated: 2024/10/22 14:10:19 by edetoh           ###   ########.fr       */
+/*   Updated: 2024/10/25 11:08:30 by edetoh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
- * La fonction ft_bzero remplit les premiers 'n' octets de la zone
-  mémoire pointée par 'pointer' avec des zéros.
-
- * Elle prend deux arguments : un pointeur 'pointer' vers la zone mémoire
-  à remplir, et un size_t 'count' qui est la taille de la zone mémoire à remplir.
-
- * Elle ne renvoie rien. Cette fonction est généralement
-  utilisée pour initialiser une zone mémoire à zéro.
-
+ * The ft_bzero function fills the first 'n' bytes of the memory
+ * area pointed to by 'pointer' with zeros.
+ *
+ * It takes two arguments: a pointer 'pointer' to the memory area
+ * to be filled, and a size_t 'count' which is the size of the
+ * memory area to be filled.
+ *
+ * It does not return anything. This function is generally used
+ * to initialize a memory area to zero.
  */
 
 void	ft_bzero(void *s, size_t n)

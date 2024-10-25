@@ -6,16 +6,16 @@
 /*   By: edetoh <edetoh@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 15:54:44 by edetoh            #+#    #+#             */
-/*   Updated: 2024/10/22 18:34:32 by edetoh           ###   ########.fr       */
+/*   Updated: 2024/10/25 11:19:20 by edetoh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
- * ft_strrchr trouve la dernière occurrence de 'letter' dans 'str'.
- * Prend 'str' (chaîne) et 'letter' (caractère à chercher).
- * Renvoie un pointeur vers le caractère trouvé, ou NULL.
+ * ft_strrchr finds the last occurrence of 'letter' in 'str'.
+ * Takes 'str' (string) and 'letter' (character to search for).
+ * Returns a pointer to the character found, or NULL.
  */
 
 char	*ft_strrchr(const char *s, int c)

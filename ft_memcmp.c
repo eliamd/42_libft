@@ -6,16 +6,16 @@
 /*   By: edetoh <edetoh@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 23:11:34 by edetoh            #+#    #+#             */
-/*   Updated: 2024/10/18 10:27:06 by edetoh           ###   ########.fr       */
+/*   Updated: 2024/10/25 11:14:17 by edetoh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
- * ft_memcmp compare 'n' octets de 's1' et 's2'.
- * Prend 's1', 's2' (pointeurs) et 'n' (taille).
- * Renvoie la différence entre les deux premiers octets non identiques.
+ * ft_memcmp compares 'n' bytes of 's1' and 's2'.
+ * Takes 's1', 's2' (pointers) and 'n' (size).
+ * Returns the difference between the first two non-identical bytes.
  */
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)

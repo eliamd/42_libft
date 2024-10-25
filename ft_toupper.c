@@ -6,20 +6,21 @@
 /*   By: edetoh <edetoh@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 15:19:43 by edetoh            #+#    #+#             */
-/*   Updated: 2024/10/22 14:15:49 by edetoh           ###   ########.fr       */
+/*   Updated: 2024/10/25 11:20:19 by edetoh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
- * La fonction ft_toupper convertit une lettre minuscule
-   en majuscule si elle est en minuscule.
+ * The ft_toupper function converts a lowercase letter
+   into uppercase if it is lowercase.
 
- * Elle prend un argument : un caractère 'letter' qui est la lettre à convertir.
+ * It takes one argument: a 'letter' character which is the
+ letter to be converted.
 
- * Elle renvoie le caractère converti en majuscule si 'letter' est
-  une minuscule, sinon elle renvoie 'letter' tel quel.
+ * It returns the character converted to uppercase if 'letter' is lowercase.
+  otherwise it returns 'letter' as is.
  */
 
 int	ft_toupper(int c)

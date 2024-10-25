@@ -6,22 +6,22 @@
 /*   By: edetoh <edetoh@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 09:54:04 by edetoh            #+#    #+#             */
-/*   Updated: 2024/10/22 14:52:43 by edetoh           ###   ########.fr       */
+/*   Updated: 2024/10/25 11:14:31 by edetoh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
- * La fonction ft_memcpy copie 'count' octets de la zone mémoire 'src'
- vers la zone mémoire 'dest'.
+ * The ft_memcpy function copies 'count' bytes from the 'src' memory area
+ memory area to the 'dest' memory area.
 
- * Elle prend trois arguments : un pointeur 'dest' vers la zone mémoire
-  de destination, un pointeur 'src' vers la zone mémoire source, et un
-  size_t 'count' qui est le nombre d'octets à copier.
+ * It takes three arguments: a 'dest' pointer to the destination memory area
+  destination memory area, a 'src' pointer to the source memory area, and a
+  size_t 'count' which is the number of bytes to be copied.
 
- * Elle renvoie un pointeur vers la zone mémoire de destination. Cette
-  fonction est généralement utilisée pour copier des blocs de mémoire.
+ * Returns a pointer to the destination memory area. This
+  This function is generally used to copy blocks of memory.
  */
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)

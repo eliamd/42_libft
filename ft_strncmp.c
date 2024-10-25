@@ -6,22 +6,22 @@
 /*   By: edetoh <edetoh@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 15:30:11 by edetoh            #+#    #+#             */
-/*   Updated: 2024/10/22 14:59:46 by edetoh           ###   ########.fr       */
+/*   Updated: 2024/10/25 11:19:00 by edetoh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
- * La fonction ft_strncmp compare les 'n' premiers caractères
-  de deux chaînes de caractères 's1' et 's2'.
+ * The ft_strncmp function compares the first 'n' characters
+  of two strings 's1' and 's2'.
 
- * Elle prend trois arguments : deux pointeurs 's1' et 's2' vers les chaînes
-  à comparer, et un unsigned int 'n' qui est le nombre de caractères à comparer.
+ * It takes three arguments: two pointers 's1' and 's2' to the strings to be
+  to compare, and an unsigned int 'n' which is the
+  number of characters to compare.
 
- * Elle renvoie un entier qui est la différence entre les deux premiers
-  caractères non identiques des chaînes.
-
+ * Returns an integer which is the difference between the first two
+  characters of the strings.
  */
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)

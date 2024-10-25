@@ -6,22 +6,22 @@
 /*   By: edetoh <edetoh@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 15:54:44 by edetoh            #+#    #+#             */
-/*   Updated: 2024/10/22 14:19:44 by edetoh           ###   ########.fr       */
+/*   Updated: 2024/10/25 11:14:02 by edetoh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
- * La fonction ft_memchr trouve la première occurrence du
-  caractère 'letter' dans la chaîne 'str'.
+ * The ft_memchr function finds the first occurrence of the
+  character in the string 'str'.
 
- * Elle prend deux arguments : un pointeur 'str' vers la
-  chaîne à traiter et un int 'letter' qui est le caractère à chercher.
+ * It takes two arguments: a 'str' pointer to the string to be
+  string to be processed and an int 'letter'
+  which is the character to be searched for.
 
- * Elle renvoie un pointeur vers le premier caractère correspondant
-  dans 'str', ou NULL si le caractère n'est pas trouvé.
-
+ * It returns a pointer to the first corresponding character
+  in 'str', or NULL if the character is not found.
 */
 
 void	*ft_memchr(const void *s, int c, size_t n)

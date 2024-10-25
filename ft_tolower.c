@@ -6,20 +6,21 @@
 /*   By: edetoh <edetoh@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 15:19:43 by edetoh            #+#    #+#             */
-/*   Updated: 2024/10/22 14:16:58 by edetoh           ###   ########.fr       */
+/*   Updated: 2024/10/25 11:20:01 by edetoh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
- * La fonction ft_tolower convertit une lettre
-  majuscule en minuscule si elle est en majuscule.
+ * The ft_tolower function converts an uppercase letter
+  to lower case if it is capitalized.
 
- * Elle prend un argument : un caractère 'letter' qui est la lettre à convertir.
+ * It takes one argument: a 'letter' character which is
+ the letter to be converted.
 
- * Elle renvoie le caractère converti en minuscule si 'letter' est
-   une majuscule, sinon elle renvoie 'letter' tel quel.
+ * Returns the converted lowercase character if 'letter' is uppercase.
+   otherwise it returns 'letter' as is.
  */
 
 int	ft_tolower(int c)

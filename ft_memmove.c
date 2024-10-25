@@ -6,22 +6,22 @@
 /*   By: edetoh <edetoh@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 11:08:16 by edetoh            #+#    #+#             */
-/*   Updated: 2024/10/22 18:41:19 by edetoh           ###   ########.fr       */
+/*   Updated: 2024/10/25 11:14:50 by edetoh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
- * La fonction ft_memmove copie 'count' octets de la zone mémoire 'src' vers
-  la zone mémoire 'dest', même si ces zones se chevauchent.
+ * The ft_memmove function copies 'count' bytes from the 'src' memory area to the
+  memory area 'dest', even if these areas overlap.
 
- * Elle prend trois arguments : un pointeur 'dest' vers la zone mémoire
- de destinationun pointeur 'src' vers la zone mémoire source, et un size_t
- 'count' qui est le nombre d'octets à copier.
+ * It takes three arguments: a 'dest' pointer to the destination memory area
+ a 'src' pointer to the source memory area, and a 'count' size_t
+ which is the number of bytes to be copied.
 
- * Elle renvoie un pointeur vers la zone mémoire de destination.
- Cette fonction est généralement utilisée pour déplacer des blocs de mémoire.
+ * It returns a pointer to the destination memory area.
+ This function is generally used to move blocks of memory.
  */
 
 void	*ft_memmove(void *dst, const void *src, size_t n)

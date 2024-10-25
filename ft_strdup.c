@@ -6,16 +6,16 @@
 /*   By: edetoh <edetoh@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/17 14:13:33 by edetoh            #+#    #+#             */
-/*   Updated: 2024/10/22 15:12:21 by edetoh           ###   ########.fr       */
+/*   Updated: 2024/10/25 11:16:44 by edetoh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
- * ft_strdup duplique une chaîne de caractères.
- * Prend 'src' (pointeur vers la chaîne source).
- * Renvoie un pointeur vers la nouvelle chaîne dupliquée.
+ * ft_strdup duplicates a string.
+ * Takes 'src' (pointer to source string).
+ * Returns a pointer to the new duplicated string.
  */
 
 char	*ft_strdup(const char *s)

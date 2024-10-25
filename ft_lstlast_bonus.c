@@ -6,15 +6,15 @@
 /*   By: edetoh <edetoh@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 13:35:49 by edetoh            #+#    #+#             */
-/*   Updated: 2024/10/23 14:41:55 by edetoh           ###   ########.fr       */
+/*   Updated: 2024/10/25 11:13:12 by edetoh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-ft_lstlast renvoie le dernier élément de 'lst'. Prend 'lst' (liste chaînée).
-Renvoie un pointeur vers le dernier élément, ou NULL si la liste est vide.
+ft_lstlast returns the last element of 'lst'. Takes 'lst' (linked list).
+Returns a pointer to the last element, or NULL if the list is empty.
 */
 
 t_list	*ft_lstlast(t_list *lst)

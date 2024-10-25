@@ -6,19 +6,17 @@
 /*   By: edetoh <edetoh@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 12:48:17 by edetoh            #+#    #+#             */
-/*   Updated: 2024/10/22 14:07:58 by edetoh           ###   ########.fr       */
+/*   Updated: 2024/10/25 11:11:13 by edetoh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
- * La fonction ft_isprint vérifie si un caractère est
- imprimable (y compris l'espace).
-
- * Elle prend en argument un entier `c` qui représente le code
-  ASCII du caractère à vérifier.
-
- * Elle renvoie 1 si le caractère est imprimable
- (dans la plage ASCII de 32 à 126 inclus) et 0 sinon.
+ * The ft_isprint function checks whether a character is
+ printable (including spaces).
+ * It takes as argument an integer `c` representing the ASCII code
+  ASCII code of the character to be checked.
+ * It returns 1 if the character is printable
+ (in the ASCII range 32 to 126 inclusive) and 0 otherwise.
  */
 
 int	ft_isprint(int c)

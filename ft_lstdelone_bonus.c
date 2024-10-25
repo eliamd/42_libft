@@ -6,19 +6,17 @@
 /*   By: edetoh <edetoh@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 15:40:43 by edetoh            #+#    #+#             */
-/*   Updated: 2024/10/23 14:40:56 by edetoh           ###   ########.fr       */
+/*   Updated: 2024/10/25 11:12:39 by edetoh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-ft_lstdelone supprime et libère un élément de 'lst'.
-
-Prend 'lst' (élément à supprimer) et
-'del' (fonction pour libérer le contenu).
-
-Ne renvoie rien. */
+ft_lstdelone deletes and frees an element from 'lst'.
+Takes 'lst' (element to delete) and
+del' (function to release content).
+Returns nothing. */
 
 void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {

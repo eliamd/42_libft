@@ -6,19 +6,17 @@
 /*   By: edetoh <edetoh@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 16:01:22 by edetoh            #+#    #+#             */
-/*   Updated: 2024/10/23 14:39:39 by edetoh           ###   ########.fr       */
+/*   Updated: 2024/10/25 11:12:21 by edetoh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-ft_lstclear supprime et libère tous les éléments de 'lst'.
-
-Prend 'lst' (adresse du pointeur vers le début de la liste)
-et 'del' (fonction pour supprimer le contenu).
-
-Ne renvoie rien.
+ft_lstclear deletes and frees all elements of 'lst'.
+Takes 'lst' (address of pointer to start of list)
+and 'del' (function to delete contents).
+Returns nothing.
 */
 
 void	ft_lstclear(t_list **lst, void (*del)(void*))

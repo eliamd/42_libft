@@ -6,16 +6,16 @@
 /*   By: edetoh <edetoh@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 16:53:00 by edetoh            #+#    #+#             */
-/*   Updated: 2024/10/23 14:29:46 by edetoh           ###   ########.fr       */
+/*   Updated: 2024/10/25 11:19:33 by edetoh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
- * ft_strtrim supprime les caractères spécifiés.
- * Prend 'str' (chaîne source) et 'str_del' (caractères à supprimer).
- * Renvoie une nouvelle chaîne sans les caractères spécifiés.
+ * ft_strtrim deletes specified characters.
+ * Takes 'str' (source string) and 'str_del' (characters to be deleted).
+ * Returns a new string without the specified characters.
  */
 
 static int	ft_is_a_del(char caract, char const *str_del)

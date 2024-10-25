@@ -6,16 +6,16 @@
 /*   By: edetoh <edetoh@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/19 13:16:47 by edetoh            #+#    #+#             */
-/*   Updated: 2024/10/23 14:28:36 by edetoh           ###   ########.fr       */
+/*   Updated: 2024/10/25 11:11:31 by edetoh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
- * ft_itoa convertit un entier en chaîne de caractères.
- * Prend 'n' (entier). Renvoie une chaîne représentant
- * l'entier ou NULL en cas d'erreur.
+ * ft_itoa converts an integer to a string.
+ * Takes 'n' (integer). Returns a string representing
+ * the integer or NULL on error.
  */
 
 static int	ft_int_len(int n)

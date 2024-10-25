@@ -6,23 +6,24 @@
 /*   By: edetoh <edetoh@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 16:05:01 by edetoh            #+#    #+#             */
-/*   Updated: 2024/10/22 14:51:43 by edetoh           ###   ########.fr       */
+/*   Updated: 2024/10/25 11:15:25 by edetoh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
- * La fonction ft_memset remplit les premiers 'n' octets de la zone
-  mémoire pointée par 'ptr' avec l'octet 'c'.
+ * The ft_memset function fills the first 'n' bytes of the memory area
+  pointed to by 'ptr' with byte 'c'.
 
- * Elle prend trois arguments : un pointeur 'ptr' vers la zone mémoire à remplir,
-  un int 'c' qui est converti en unsigned char et utilisé pour remplir la mémoire
-  , et un size_t 'n' qui est la taille de la zone mémoire à remplir.
+ * It takes three arguments: a pointer 'ptr' to the memory area to be filled,
+  an int 'c' which is converted to an unsigned
+  char and used to fill the memory area
+  and a size_t 'n' which is the size of the memory area to be filled.
 
- * Elle renvoie un pointeur vers la zone mémoire remplie.
-  Cette fonction est généralement utilisée pour initialiser
-   une zone mémoire à une valeur spécifique.
+ * It returns a pointer to the filled memory area.
+  This function is generally used to initialize
+   a memory area to a specific value.
  */
 
 void	*ft_memset(void *s, int c, size_t len)

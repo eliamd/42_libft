@@ -6,16 +6,16 @@
 /*   By: edetoh <edetoh@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/19 15:34:49 by edetoh            #+#    #+#             */
-/*   Updated: 2024/10/22 15:15:26 by edetoh           ###   ########.fr       */
+/*   Updated: 2024/10/25 11:18:41 by edetoh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
- * ft_strmapi applique une fonction à chaque caractère.
- * Prend 's' (chaîne source) et 'f' (fonction à appliquer).
- * Renvoie une nouvelle chaîne modifiée ou NULL en cas d'erreur.
+ * ft_strmapi applies a function to each character.
+ * Takes 's' (source string) and 'f' (function to apply).
+ * Returns a new modified string or NULL on error.
  */
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))

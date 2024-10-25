@@ -6,17 +6,17 @@
 /*   By: edetoh <edetoh@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/19 10:31:59 by edetoh            #+#    #+#             */
-/*   Updated: 2024/10/23 12:44:13 by edetoh           ###   ########.fr       */
+/*   Updated: 2024/10/25 11:16:14 by edetoh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
- * tab_malloc alloue et copie une sous-chaîne.
- * Prend 'str' (chaîne source), 'start' (index de début),
- * 'len' (longueur de la sous-chaîne) et 'tab' (tableau de chaînes).
- * Renvoie la sous-chaîne ou NULL en cas d'erreur.
+ * tab_malloc allocates and copies a substring.
+ * Takes 'str' (source string), 'start' (start index),
+ * len' (substring length) and 'tab' (string array).
+ * Returns the substring or NULL on error.
  */
 
 static char	*malloc_tab(const char *str, int start, int len)

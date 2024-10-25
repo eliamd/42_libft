@@ -6,16 +6,16 @@
 /*   By: edetoh <edetoh@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 14:52:31 by edetoh            #+#    #+#             */
-/*   Updated: 2024/10/22 14:23:44 by edetoh           ###   ########.fr       */
+/*   Updated: 2024/10/25 11:19:41 by edetoh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
- * ft_substr extrait une sous-chaîne de 'str'.
- * Prend 'str' (chaîne source), 'start' (index de début),
- * et 'len' (longueur de la sous-chaîne). Renvoie la sous-chaîne.
+ * ft_substr extracts a substring from 'str'.
+ * Takes 'str' (source string), 'start' (start index),
+ * and 'len' (length of substring). Returns the substring.
  */
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)

@@ -6,16 +6,16 @@
 /*   By: edetoh <edetoh@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 11:36:24 by edetoh            #+#    #+#             */
-/*   Updated: 2024/10/22 14:49:21 by edetoh           ###   ########.fr       */
+/*   Updated: 2024/10/25 11:08:03 by edetoh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
- * La fonction ft_atoi convertit une chaîne de caractères en un entier.
- * Elle prend en argument une chaîne de caractères `nptr`.
- * Elle renvoie le nombre entier correspondant à la chaîne d'entrée.
+ * The ft_atoi function converts a string to an integer.
+ * It takes a string `nptr` as an argument.
+ * It returns the integer corresponding to the input string.
  */
 
 int	ft_atoi(const char *nptr)

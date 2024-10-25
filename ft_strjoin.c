@@ -6,16 +6,16 @@
 /*   By: edetoh <edetoh@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 16:15:49 by edetoh            #+#    #+#             */
-/*   Updated: 2024/10/18 16:39:27 by edetoh           ###   ########.fr       */
+/*   Updated: 2024/10/25 11:17:41 by edetoh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
- * ft_strjoin concatène deux chaînes de caractères.
- * Prend 's1' (première chaîne) et 's2' (deuxième chaîne).
- * Renvoie une nouvelle chaîne résultant de la concaténation.
+ * ft_strjoin concatenates two strings.
+ * Takes 's1' (first string) and 's2' (second string).
+ * Returns a new string resulting from the concatenation.
  */
 
 char	*ft_strjoin(char const *s1, char const *s2)
