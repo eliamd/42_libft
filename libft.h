@@ -6,7 +6,7 @@
 /*   By: edetoh <edetoh@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 11:13:45 by edetoh            #+#    #+#             */
-/*   Updated: 2024/10/23 15:54:09 by edetoh           ###   ########.fr       */
+/*   Updated: 2024/10/28 18:06:13 by edetoh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,8 +48,8 @@ char			**ft_split(char const *s, char c);
 char			*ft_itoa(int n);
 char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void			ft_striteri(char *s, void (*f)(unsigned int, char*));
-void			ft_putchar_fd(char c, int fd);
-void			ft_putstr_fd(char *s, int fd);
+int				ft_putchar_fd(char c, int fd);
+int				ft_putstr_fd(char *s, int fd);
 void			ft_putendl_fd(char *s, int fd);
 void			ft_putnbr_fd(int n, int fd);
 
@@ -70,5 +70,12 @@ void			ft_lstclear(t_list **lst, void (*del)(void*));
 void			ft_lstiter(t_list *lst, void (*f)(void *));
 t_list			*ft_lstmap(t_list *lst, void *(*f)(void *), \
 				void (*del)(void *));
+
+// EN PLUS
+
+char			*ft_unsigned_itoa(unsigned int n);
+int				ft_putadress(void *ptr);
+int				ft_puthexlow(unsigned int num);
+int				ft_puthexup(unsigned int num);
 
 #endif

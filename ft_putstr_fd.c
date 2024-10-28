@@ -6,7 +6,7 @@
 /*   By: edetoh <edetoh@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/19 16:34:23 by edetoh            #+#    #+#             */
-/*   Updated: 2024/10/25 11:16:05 by edetoh           ###   ########.fr       */
+/*   Updated: 2024/10/28 18:00:55 by edetoh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,13 @@ Takes 's' (string to write) and 'fd' (file descriptor).
 Uses write() to write the string to the file.
 */
 
-void	ft_putstr_fd(char *s, int fd)
+int	ft_putstr_fd(char *s, int fd)
 {
 	int	str_len;
 
 	str_len = ft_strlen(s);
 	write(fd, s, str_len);
+	return (str_len);
 }
 
 // #include  <string.h>

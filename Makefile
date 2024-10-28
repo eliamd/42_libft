@@ -55,10 +55,8 @@ SRCS        := ft_isdigit.c \
                ft_putchar_fd.c \
                ft_putstr_fd.c \
                ft_putendl_fd.c \
-               ft_putnbr_fd.c
-
-# Liste des fichiers sources pour les bonus
-SRCS_BONUS  := ft_lstnew_bonus.c \
+               ft_putnbr_fd.c \
+               ft_lstnew_bonus.c \
                ft_lstadd_front_bonus.c \
                ft_lstsize_bonus.c \
                ft_lstlast_bonus.c \
@@ -67,10 +65,12 @@ SRCS_BONUS  := ft_lstnew_bonus.c \
                ft_lstclear_bonus.c \
                ft_lstiter_bonus.c \
                ft_lstmap_bonus.c \
+               ft_putadress.c \
+               ft_put_nb_hex_low.c \
+               ft_put_nb_hex_up.c \
 
 # Transformation des fichiers sources en fichiers objets
 OBJS        := $(SRCS:.c=.o)
-OBJS_BONUS  := $(SRCS_BONUS:.c=.o)
 
 # **************************************************************************** #
 #                                 RÈGLES                                       #
@@ -87,16 +87,6 @@ $(NAME): $(OBJS)
 	$(AR) $(NAME) $(OBJS)
 	@echo " "
 	@echo ">>>>> $(NAME) créé avec succès. <<<<<"
-	@echo " "
-
-# Compilation des fichiers bonus
-bonus: $(OBJS) $(OBJS_BONUS)
-	@echo " "
-	@echo ">>>>> Ajout des bonus à $(NAME)... <<<<<"
-	@echo " "
-	$(AR) $(NAME) $(OBJS) $(OBJS_BONUS)
-	@echo " "
-	@echo ">>>>> Bonus ajoutés avec succès. <<<<<"
 	@echo " "
 
 # Compilation des fichiers objets
@@ -137,4 +127,4 @@ re: fclean all
 # **************************************************************************** #
 
 # Indique que ces règles ne correspondent pas à des fichiers
-.PHONY: all clean fclean re bonus
+.PHONY: all clean fclean re
