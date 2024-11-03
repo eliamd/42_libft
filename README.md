@@ -6,7 +6,7 @@
 
 ## Description
 
-`libft` est un projet de la piscine 42 qui consiste à recréer une bibliothèque standard en C avec un ensemble de fonctions fréquemment utilisées en programmation. L'objectif est de développer une compréhension approfondie des fonctions de manipulation de chaînes, de mémoire et de gestion des caractères, qui sont largement utilisées dans le développement de logiciels.
+`libft` est un projet du common core 42 qui consiste à recréer une bibliothèque standard en C avec un ensemble de fonctions fréquemment utilisées en programmation. L'objectif est de développer une compréhension approfondie des fonctions de manipulation de chaînes, de mémoire et de gestion des caractères, qui sont largement utilisées dans le développement de logiciels.
 
 ## Compilation
 
