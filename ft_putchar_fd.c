@@ -6,7 +6,7 @@
 /*   By: edetoh <edetoh@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/19 16:34:23 by edetoh            #+#    #+#             */
-/*   Updated: 2024/10/25 11:15:34 by edetoh           ###   ########.fr       */
+/*   Updated: 2024/11/04 13:48:31 by edetoh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@ Takes 'c' (character to be written) and 'fd' (file descriptor).
 Uses write() to write the character.
 */
 
-void	ft_putchar_fd(char c, int fd)
+int	ft_putchar_fd(char c, int fd)
 {
-	write(fd, &c, 1);
+	return (write(fd, &c, 1));
 }
 
 // #include  <string.h>
