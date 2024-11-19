@@ -19,6 +19,10 @@
 # include <stdarg.h>
 # include <stdio.h>
 
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 10
+# endif
+
 int				ft_atoi(const char *nptr);
 size_t			ft_strlen(const char *s);
 void			*ft_memset(void *s, int c, size_t n);
@@ -81,6 +85,24 @@ int				ft_putadress(void *ptr);
 int				ft_puthexlow(unsigned int num);
 int				ft_puthexup(unsigned int num);
 int				ft_put_unsigned_nbr_fd(unsigned int n, int fd);
+
+// PRINT F
 int				ft_printf(const char *str, ...);
+
+//GET NEXT LINE
+typedef struct s_list_gnl
+{
+	char			*content;
+	struct s_list_gnl	*next;
+}					t_list_gnl;
+
+t_list_gnl			*ft_lstlast_gnl(t_list_gnl *lst);
+int				found_newline(t_list_gnl *list);
+void			polish_list(t_list_gnl **list);
+void			ft_lstadd_backbuffer(t_list_gnl **lst, char *buffer);
+void			dealloc(t_list_gnl **list, t_list_gnl *clean_node, char *buf);
+void			create_list(t_list_gnl **list, int fd);
+
+char			*get_next_line(int fd);
 
 #endif
